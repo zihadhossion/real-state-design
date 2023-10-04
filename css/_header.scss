@@ -1,0 +1,84 @@
+@import "variable";
+
+#header {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2.25rem;
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+
+        .logo-box {
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+
+            li {
+                cursor: pointer;
+                border-radius: 6rem;
+                padding: 1rem 2.25rem;
+                transition: all .2s linear;
+
+                a {
+                    color: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+                &:hover {
+                    background: hsla(0, 0%, 100%, .07);
+                }
+            }
+
+
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        gap: 2rem;
+
+        .account {
+            font-weight: 700;
+            cursor: pointer;
+
+            span {
+                margin-left: .5rem;
+            }
+        }
+
+        .btn {
+            font-weight: 600;
+            background: transparent;
+            border: 1px solid $primary-color;
+            outline: none;
+            border-radius: 6rem;
+            padding: 1rem 2.25rem;
+            transition: all .3s linear;
+            cursor: pointer;
+
+            &:hover {
+                background: $bg-color-2;
+            }
+        }
+
+        .menu-bar {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
+}
