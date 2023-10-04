@@ -19,57 +19,82 @@ li {
   list-style-type: none; }
 
 #header {
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 2.25rem; }
-  #header .left {
+  font-size: 1.5rem; }
+  #header .desktop-bar {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 5rem; }
-    #header .left .logo-box {
-      cursor: pointer; }
-    #header .left nav {
+    padding: 2.25rem; }
+    #header .desktop-bar .left {
       display: flex;
-      gap: 1rem; }
-      #header .left nav li {
-        cursor: pointer;
+      align-items: center;
+      gap: 5rem; }
+      #header .desktop-bar .left .logo-box {
+        cursor: pointer; }
+      #header .desktop-bar .left nav {
+        display: flex; }
+        #header .desktop-bar .left nav li {
+          cursor: pointer;
+          border-radius: 6rem;
+          padding: 1rem 2.25rem;
+          transition: all .2s linear; }
+          #header .desktop-bar .left nav li a {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 1rem; }
+            #header .desktop-bar .left nav li a span {
+              font-weight: 600; }
+          #header .desktop-bar .left nav li:hover {
+            background: rgba(255, 255, 255, 0.07); }
+    #header .desktop-bar .right {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      gap: 2rem; }
+      #header .desktop-bar .right .account {
+        font-weight: 700;
+        cursor: pointer; }
+        #header .desktop-bar .right .account span {
+          margin-left: .5rem; }
+      #header .desktop-bar .right .btn {
+        font-weight: 600;
+        background: transparent;
+        border: 1px solid #ffffff;
+        outline: none;
         border-radius: 6rem;
         padding: 1rem 2.25rem;
-        transition: all .2s linear; }
-        #header .left nav li a {
-          color: #ffffff;
-          display: flex;
-          align-items: center;
-          gap: 1rem; }
-          #header .left nav li a span {
-            font-weight: 600; }
-        #header .left nav li:hover {
-          background: rgba(255, 255, 255, 0.07); }
-  #header .right {
-    display: flex;
+        transition: all .3s linear;
+        cursor: pointer; }
+        #header .desktop-bar .right .btn:hover {
+          background: #ee4c34; }
+      #header .desktop-bar .right .menu-bar {
+        font-size: 2rem;
+        cursor: pointer; }
+  #header .mobile-bar {
+    font-size: 2rem;
+    color: #181A20;
+    background: #ffffff;
+    display: none;
+    justify-content: space-between;
     align-items: center;
-    font-size: 1.5rem;
-    gap: 2rem; }
-    #header .right .account {
-      font-weight: 700;
+    padding: 1rem 3rem; }
+    #header .mobile-bar .logo-box {
       cursor: pointer; }
-      #header .right .account span {
-        margin-left: .5rem; }
-    #header .right .btn {
-      font-weight: 600;
-      background: transparent;
-      border: 1px solid #ffffff;
-      outline: none;
-      border-radius: 6rem;
-      padding: 1rem 2.25rem;
-      transition: all .3s linear;
-      cursor: pointer; }
-      #header .right .btn:hover {
-        background: #ee4c34; }
-    #header .right .menu-bar {
-      font-size: 2rem;
-      cursor: pointer; }
+
+@media (max-width: 1155px) {
+  #header .desktop-bar {
+    padding: 1rem; }
+    #header .desktop-bar .left {
+      gap: .1rem; }
+      #header .desktop-bar .left nav li {
+        padding: .75rem 1.5rem; }
+        #header .desktop-bar .left nav li a {
+          gap: .5rem; } }
+@media (max-width: 992px) {
+  #header .desktop-bar {
+    display: none; }
+  #header .mobile-bar {
+    display: flex; } }
 
 /*# sourceMappingURL=style.css.map */
