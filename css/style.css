@@ -52,14 +52,26 @@ li {
             width: 240px;
             color: #181A20;
             background: #ffffff;
-            visibility: hidden;
+            border-radius: .6rem;
             position: absolute;
             left: 0;
             top: 100%;
             transform: scaleY(0);
-            transition: all .3s linear;
+            transform-origin: 0 0;
+            transition: all .2s ease-in-out;
             box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05);
+            visibility: hidden;
             opacity: 0; }
+            #header .desktop-bar .left #nav-links .drop-item .sub-menu li {
+              width: 240px;
+              margin-bottom: 1.5rem;
+              padding: 1rem 3rem;
+              transition: all .25s linear; }
+              #header .desktop-bar .left #nav-links .drop-item .sub-menu li:hover {
+                background: rgba(235, 102, 82, 0.07);
+                cursor: pointer; }
+              #header .desktop-bar .left #nav-links .drop-item .sub-menu li:nth-child(1) {
+                margin-top: 1.5rem; }
           #header .desktop-bar .left #nav-links .drop-item:hover {
             background: rgba(255, 255, 255, 0.07); }
           #header .desktop-bar .left #nav-links .drop-item:hover .sub-menu {

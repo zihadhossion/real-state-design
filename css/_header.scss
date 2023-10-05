@@ -47,14 +47,33 @@
                         width: 240px;
                         color: $second-color;
                         background: $primary-color;
-                        visibility: hidden;
+                        border-radius: .6rem;
                         position: absolute;
                         left: 0;
                         top: 100%;
                         transform: scaleY(0);
-                        transition: all .3s linear;
+                        transform-origin: 0 0;
+                        transition: all .2s ease-in-out;
                         box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+                        visibility: hidden;
                         opacity: 0;
+
+                        li {
+                            width: 240px;
+                            margin-bottom: 1.5rem;
+                            padding: 1rem 3rem;
+                            transition: all .25s linear;
+
+                            &:hover {
+                                background: hsla(8, 79%, 62%, .07);
+                                cursor: pointer;
+                            }
+
+                            &:nth-child(1) {
+                                margin-top: 1.5rem;
+                            }
+
+                        }
                     }
 
                     &:hover {
