@@ -42,25 +42,58 @@
                         }
                     }
 
-                    .sub-menu {
-                        height: auto;
-                        width: 240px;
+                    .megamenu {
+                        max-width: 600px;
+                        display: flex;
+                        justify-content: space-evenly;
+
+                        .megamenu-list {
+                            margin-top: 1rem;
+
+                            h4 {
+                                padding: 1rem 3rem;
+                            }
+
+                            li {
+                                width: 200px;
+                                margin-bottom: .7rem;
+                                padding: 1rem 3rem;
+                                transition: all .25s linear;
+
+                                &:hover {
+                                    background: hsla(8, 79%, 62%, .07);
+                                    cursor: pointer;
+                                }
+
+                                &:nth-child(1) {
+                                    margin-top: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .ss-menu {
                         color: $second-color;
                         background: $primary-color;
                         border-radius: .6rem;
+                        height: auto;
+                        visibility: hidden;
+                        opacity: 0;
+                        transform: scaleY(0);
+                        transform-origin: 0 0;
                         position: absolute;
                         left: 0;
                         top: 100%;
-                        transform: scaleY(0);
-                        transform-origin: 0 0;
                         transition: all .2s ease-in-out;
                         box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
-                        visibility: hidden;
-                        opacity: 0;
+                    }
+
+                    .sub-menu {
+                        width: 240px;
 
                         li {
                             width: 240px;
-                            margin-bottom: 1.5rem;
+                            margin-bottom: .75rem;
                             padding: 1rem 3rem;
                             transition: all .25s linear;
 
@@ -70,9 +103,8 @@
                             }
 
                             &:nth-child(1) {
-                                margin-top: 1.5rem;
+                                margin-top: 1rem;
                             }
-
                         }
                     }
 
@@ -80,14 +112,12 @@
                         background: hsla(0, 0%, 100%, .07);
                     }
 
-                    &:hover .sub-menu {
+                    &:hover .ss-menu {
                         visibility: visible;
                         transform: scaleY(1);
                         opacity: 1;
                     }
                 }
-
-
             }
         }
 
