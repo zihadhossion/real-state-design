@@ -96,6 +96,7 @@
                             margin-bottom: .75rem;
                             padding: 1rem 3rem;
                             transition: all .25s linear;
+                            position: relative;
 
                             &:hover {
                                 background: hsla(8, 79%, 62%, .07);
@@ -105,6 +106,31 @@
                             &:nth-child(1) {
                                 margin-top: 1rem;
                             }
+
+                            .parent-title {
+                                display: flex;
+                                justify-content: space-between;
+                            }
+
+
+                            .child-menu {
+                                border-radius: .6rem;
+                                position: absolute;
+                                left: 100%;
+                                top: 25%;
+                                visibility: hidden;
+                                transform: scaleY(0);
+                                transform-origin: 0 0;
+                                opacity: 0;
+                                background: $primary-color;
+                                transition: all .3s ease-in-out;
+                            }
+                        }
+
+                        .parent-menu:hover .child-menu {
+                            visibility: visible;
+                            transform: scaleY(1);
+                            opacity: 1;
                         }
                     }
 
@@ -136,7 +162,7 @@
                 }
             }
 
-            .btn {
+            .property-btn {
                 font-weight: 600;
                 background: transparent;
                 border: 1px solid $primary-color;
@@ -148,6 +174,12 @@
 
                 &:hover {
                     background: $bg-color-2;
+                }
+
+                i {
+                    font-size: 1.5rem;
+                    margin-left: 1rem;
+                    transform: rotate(-45deg);
                 }
             }
 
