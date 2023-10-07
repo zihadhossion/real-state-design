@@ -204,6 +204,84 @@
         .logo-box {
             cursor: pointer;
         }
+
+        #sidebar {
+            width: 280px;
+            height: 100%;
+            background: $primary-color;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: fixed;
+            left: 0;
+            top: 0;
+            transition: all .3s ease-in-out;
+            box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+
+            .side-header {
+                background: $bg-light;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 2rem 1.25rem;
+
+                h4 {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                #closeMenu {
+                    color: $primary-color;
+                    background: $bg-color-2;
+                    border-radius: 50%;
+                    padding: .8rem 1.25rem;
+                }
+            }
+
+            .side-content {
+                height: 100%;
+
+                #nav-links {
+                    .drop-item {
+                        width: 100%;
+                        font-weight: 600;
+                        border-radius: 6rem;
+                        padding: .8rem 1.5rem;
+                        transition: all .25s linear;
+                        position: relative;
+                        cursor: pointer;
+
+                        .list-item {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        .sub-menu {
+                            height: 100%;
+                            color: $second-color;
+                            background: $primary-color;
+                            border-radius: .6rem;
+                            box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+                        }
+
+                        .ss-menu {
+
+                            height: auto;
+                            transform: scaleY(0);
+                            transform-origin: 0 0;
+                            position: absolute;
+                            left: 0;
+                            top: 100%;
+                            transition: all .2s ease-in-out;
+                        }
+
+                        .active {
+                            transform: scaleY(1);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

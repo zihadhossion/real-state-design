@@ -156,6 +156,61 @@ li {
     padding: 1rem 3rem; }
     #header .mobile-bar .logo-box {
       cursor: pointer; }
+    #header .mobile-bar #sidebar {
+      width: 280px;
+      height: 100%;
+      background: #ffffff;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: fixed;
+      left: 0;
+      top: 0;
+      transition: all .3s ease-in-out;
+      box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
+      #header .mobile-bar #sidebar .side-header {
+        background: #fef4f3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 1.25rem; }
+        #header .mobile-bar #sidebar .side-header h4 {
+          font-size: 2rem;
+          font-weight: 600; }
+        #header .mobile-bar #sidebar .side-header #closeMenu {
+          color: #ffffff;
+          background: #ee4c34;
+          border-radius: 50%;
+          padding: .8rem 1.25rem; }
+      #header .mobile-bar #sidebar .side-content {
+        height: 100%; }
+        #header .mobile-bar #sidebar .side-content #nav-links .drop-item {
+          width: 100%;
+          font-weight: 600;
+          border-radius: 6rem;
+          padding: .8rem 1.5rem;
+          transition: all .25s linear;
+          position: relative;
+          cursor: pointer; }
+          #header .mobile-bar #sidebar .side-content #nav-links .drop-item .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; }
+          #header .mobile-bar #sidebar .side-content #nav-links .drop-item .sub-menu {
+            height: 100%;
+            color: #181A20;
+            background: #ffffff;
+            border-radius: .6rem;
+            box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
+          #header .mobile-bar #sidebar .side-content #nav-links .drop-item .ss-menu {
+            height: auto;
+            transform: scaleY(0);
+            transform-origin: 0 0;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            transition: all .2s ease-in-out; }
+          #header .mobile-bar #sidebar .side-content #nav-links .drop-item .active {
+            transform: scaleY(1); }
 
 @media (max-width: 1120px) {
   #header .desktop-bar {
