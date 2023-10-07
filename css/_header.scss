@@ -15,11 +15,14 @@
             gap: 5rem;
 
             .logo-box {
+                display: flex;
+                align-items: center;
                 cursor: pointer;
             }
 
             #nav-links {
                 display: flex;
+                align-items: center;
 
                 .drop-item {
                     font-weight: 600;
@@ -34,7 +37,6 @@
 
                         span:nth-child(2) {
                             margin-left: .6rem;
-                            font-size: 1.5rem;
                         }
 
                         .fa-chevron-down {
@@ -205,20 +207,24 @@
     }
 }
 
-@media (max-width:1155px) {
+@media (max-width:1120px) {
     #header {
         .desktop-bar {
-            padding: 1rem;
+            padding: 2rem .5rem;
 
             .left {
-                gap: .1rem;
+                gap: .25rem;
 
-                nav {
-                    li {
-                        padding: .75rem 1.5rem;
+                #nav-links {
+                    .drop-item {
+                        padding: .5rem 1rem;
 
-                        a {
+                        .list-item {
                             gap: .5rem;
+
+                            span:nth-child(2) {
+                                margin-left: .25rem;
+                            }
                         }
                     }
                 }
