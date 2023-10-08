@@ -1,7 +1,32 @@
 @import "variable";
 
+.sticky {
+    box-shadow: 0 1px 4px rgba(24, 26, 32, .07);
+    position: fixed;
+    color: $second-color;
+    background: $bg-light;
+    animation: slideDown 1s both;
+
+    .left #nav-links .drop-item .list-item {
+        color: $second-color !important;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateZ(0);
+    }
+}
+
 #header {
+    width: 100%;
     font-size: 1.5rem;
+    border-bottom: 1px solid hsla(0, 0%, 100%, .07);
 
     .desktop-bar {
         display: flex;
@@ -205,16 +230,16 @@
             cursor: pointer;
         }
 
-        #sidebar {
+        .sidebar {
             width: 280px;
             height: 100%;
             background: $primary-color;
             overflow-x: hidden;
             overflow-y: auto;
             position: fixed;
-            left: 0;
+            left: -100%;
             top: 0;
-            transition: all .3s ease-in-out;
+            transition: all .25s linear;
             box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
 
             .side-header {
@@ -272,9 +297,18 @@
                             position: static;
                             transform: none;
                         }
+
+                        .aeroActive {
+                            transform: rotate(90deg);
+                            transition: all .1s ease-in-out;
+                        }
                     }
                 }
             }
+        }
+
+        .sideActive {
+            left: 0px !important;
         }
     }
 }
