@@ -186,7 +186,7 @@
             }
 
             .menu-bar {
-                font-size: 2rem;
+                font-size: 2.25rem;
                 cursor: pointer;
             }
         }
@@ -233,12 +233,11 @@
                     color: $primary-color;
                     background: $bg-color-2;
                     border-radius: 50%;
-                    padding: .8rem 1.25rem;
+                    padding: .8rem 1.5rem;
                 }
             }
 
             .side-content {
-                height: 100%;
 
                 #nav-links {
                     .drop-item {
@@ -257,26 +256,21 @@
                         }
 
                         .sub-menu {
-                            height: 100%;
+                            display: none;
+                            height: 0px;
                             color: $second-color;
                             background: $primary-color;
                             border-radius: .6rem;
                             box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+                            transition: height 500ms !important;
                         }
 
                         .ss-menu {
-
+                            display: block;
+                            overflow: auto;
                             height: auto;
-                            transform: scaleY(0);
-                            transform-origin: 0 0;
-                            position: absolute;
-                            left: 0;
-                            top: 100%;
-                            transition: all .2s ease-in-out;
-                        }
-
-                        .active {
-                            transform: scaleY(1);
+                            position: static;
+                            transform: none;
                         }
                     }
                 }
