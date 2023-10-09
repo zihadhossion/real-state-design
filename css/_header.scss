@@ -1,10 +1,11 @@
-@import "variable";
-
 #header {
     width: 100%;
+    display: block;
     font-size: 1.5rem;
     border-bottom: 1px solid hsla(0, 0%, 100%, .07);
-    position: relative;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
 
     .sticky {
         box-shadow: 0 1px 4px rgba(24, 26, 32, .07);
@@ -14,6 +15,7 @@
         animation-name: slideDown;
         animation-duration: 1s;
         animation-fill-mode: both;
+        z-index: 99;
 
         @keyframes slideDown {
             0% {
@@ -40,14 +42,28 @@
         .left .logo-box .b-img {
             display: block !important;
         }
+
+        .right {
+            color: $second-color;
+
+            .property-btn {
+                color: $second-color;
+                border: 1px solid $second-color !important;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
     }
 
     .desktop-bar {
         width: 100%;
+        color: $primary-color;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 2.25rem;
+        padding: 2rem 0;
 
         .left {
             display: flex;
@@ -192,11 +208,11 @@
         .right {
             display: flex;
             align-items: center;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             gap: 2rem;
 
             .account {
-                font-weight: 700;
+                font-weight: 600;
                 cursor: pointer;
 
                 span {
@@ -205,6 +221,7 @@
             }
 
             .property-btn {
+                font-size: 1.5rem;
                 font-weight: 600;
                 background: transparent;
                 border: 1px solid $primary-color;

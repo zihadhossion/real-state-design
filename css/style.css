@@ -8,9 +8,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: url("../image/home.jpg");
-  color: #ffffff; }
+  font-family: 'Poppins', sans-serif; }
 
 a {
   text-decoration: none; }
@@ -18,11 +16,17 @@ a {
 li {
   list-style-type: none; }
 
+.wrapper {
+  height: 100vh; }
+
 #header {
   width: 100%;
+  display: block;
   font-size: 1.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-  position: relative; }
+  background-color: transparent;
+  position: fixed;
+  z-index: 1; }
   #header .sticky {
     box-shadow: 0 1px 4px rgba(24, 26, 32, 0.07);
     position: fixed;
@@ -30,7 +34,8 @@ li {
     background: #fef4f3;
     animation-name: slideDown;
     animation-duration: 1s;
-    animation-fill-mode: both; }
+    animation-fill-mode: both;
+    z-index: 99; }
 @keyframes slideDown {
   0% {
     transform: translate3d(0, -100%, 0); }
@@ -44,12 +49,20 @@ li {
       display: none; }
     #header .sticky .left .logo-box .b-img {
       display: block !important; }
+    #header .sticky .right {
+      color: #181A20; }
+      #header .sticky .right .property-btn {
+        color: #181A20;
+        border: 1px solid #181A20 !important; }
+        #header .sticky .right .property-btn:hover {
+          color: #ffffff; }
   #header .desktop-bar {
     width: 100%;
+    color: #ffffff;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2.25rem; }
+    padding: 2rem 0; }
     #header .desktop-bar .left {
       display: flex;
       align-items: center;
@@ -146,14 +159,15 @@ li {
     #header .desktop-bar .right {
       display: flex;
       align-items: center;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       gap: 2rem; }
       #header .desktop-bar .right .account {
-        font-weight: 700;
+        font-weight: 600;
         cursor: pointer; }
         #header .desktop-bar .right .account span {
           margin-left: .5rem; }
       #header .desktop-bar .right .property-btn {
+        font-size: 1.5rem;
         font-weight: 600;
         background: transparent;
         border: 1px solid #ffffff;
@@ -265,8 +279,30 @@ li {
     display: none; }
   #header .mobile-bar {
     display: flex; } }
-#hero {
-  min-height: 100vh; }
+#home {
+  height: 100%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  text-align: center;
+  background-image: url("../image/home.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative; }
+  #home .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    #home .container .title {
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .5rem; }
+    #home .container .desc {
+      font-size: 5rem; }
+    #home .container input {
+      width: 100%;
+      border: none;
+      outline: none; }
 
 #explore-property {
   min-height: 100vh;

@@ -12,9 +12,8 @@ html {
 }
 
 body {
+    // min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: url('../image/home.jpg');
-    color: $primary-color;
 }
 
 a {
@@ -23,4 +22,8 @@ a {
 
 li {
     list-style-type: none;
+}
+
+.wrapper {
+    height: 100vh;
 }
