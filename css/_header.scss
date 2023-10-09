@@ -5,21 +5,34 @@
     position: fixed;
     color: $second-color;
     background: $bg-light;
-    animation: slideDown 1s both;
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+    @keyframes slideDown {
+        0% {
+            transform: translate3d(0, -100%, 0);
+        }
+
+        100% {
+            transform: translateZ(0);
+        }
+    }
 
     .left #nav-links .drop-item .list-item {
         color: $second-color !important;
     }
-}
 
-@keyframes slideDown {
-    0% {
-        transform: translate3d(0, -100%, 0);
-        visibility: visible;
+    .desktop-bar .right .property-btn {
+        border: 1px solid $second-color !important;
     }
 
-    100% {
-        transform: translateZ(0);
+    .desktop-bar .left .logo-box .wh-img {
+        display: none;
+    }
+
+    .desktop-bar .left .logo-box .b-img {
+        display: block !important;
     }
 }
 
@@ -195,7 +208,7 @@
                 border: 1px solid $primary-color;
                 outline: none;
                 border-radius: 6rem;
-                padding: 1rem 2.25rem;
+                padding: 1.25rem 2.2rem;
                 transition: all .3s linear;
                 cursor: pointer;
 
