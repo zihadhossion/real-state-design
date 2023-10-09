@@ -18,33 +18,34 @@ a {
 li {
   list-style-type: none; }
 
-.sticky {
-  box-shadow: 0 1px 4px rgba(24, 26, 32, 0.07);
-  position: fixed;
-  color: #181A20;
-  background: #fef4f3;
-  animation-name: slideDown;
-  animation-duration: 1s;
-  animation-fill-mode: both; }
+#header {
+  width: 100%;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  position: relative; }
+  #header .sticky {
+    box-shadow: 0 1px 4px rgba(24, 26, 32, 0.07);
+    position: fixed;
+    color: #181A20;
+    background: #fef4f3;
+    animation-name: slideDown;
+    animation-duration: 1s;
+    animation-fill-mode: both; }
 @keyframes slideDown {
   0% {
     transform: translate3d(0, -100%, 0); }
   100% {
     transform: translateZ(0); } }
-  .sticky .left #nav-links .drop-item .list-item {
-    color: #181A20 !important; }
-  .sticky .desktop-bar .right .property-btn {
-    border: 1px solid #181A20 !important; }
-  .sticky .desktop-bar .left .logo-box .wh-img {
-    display: none; }
-  .sticky .desktop-bar .left .logo-box .b-img {
-    display: block !important; }
-
-#header {
-  width: 100%;
-  font-size: 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+    #header .sticky .left #nav-links .drop-item .list-item {
+      color: #181A20 !important; }
+    #header .sticky .right .property-btn {
+      border: 1px solid #181A20 !important; }
+    #header .sticky .left .logo-box .wh-img {
+      display: none; }
+    #header .sticky .left .logo-box .b-img {
+      display: block !important; }
   #header .desktop-bar {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -171,6 +172,7 @@ li {
         font-size: 2.25rem;
         cursor: pointer; }
   #header .mobile-bar {
+    width: 100%;
     font-size: 2rem;
     color: #181A20;
     background: #ffffff;
@@ -180,62 +182,72 @@ li {
     padding: 1rem 3rem; }
     #header .mobile-bar .logo-box {
       cursor: pointer; }
-    #header .mobile-bar .sidebar {
-      width: 280px;
-      height: 100%;
-      background: #ffffff;
-      overflow-x: hidden;
-      overflow-y: auto;
-      position: fixed;
-      left: -100%;
-      top: 0;
-      transition: all .25s linear;
-      box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
-      #header .mobile-bar .sidebar .side-header {
-        background: #fef4f3;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 2rem 1.25rem; }
-        #header .mobile-bar .sidebar .side-header h4 {
-          font-size: 2rem;
-          font-weight: 600; }
-        #header .mobile-bar .sidebar .side-header #closeMenu {
-          color: #ffffff;
-          background: #ee4c34;
-          border-radius: 50%;
-          padding: .8rem 1.5rem; }
-      #header .mobile-bar .sidebar .side-content #nav-links .drop-item {
-        width: 100%;
+  #header .sidebar {
+    width: 280px;
+    height: 100%;
+    background: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .25s ease-in-out;
+    box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
+    #header .sidebar .side-header {
+      background: #fef4f3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 1.25rem; }
+      #header .sidebar .side-header h4 {
+        font-size: 2rem;
         font-weight: 600;
-        border-radius: 6rem;
-        padding: .8rem 1.5rem;
-        transition: all .25s linear;
-        position: relative;
-        cursor: pointer; }
-        #header .mobile-bar .sidebar .side-content #nav-links .drop-item .list-item {
-          display: flex;
-          justify-content: space-between;
-          align-items: center; }
-        #header .mobile-bar .sidebar .side-content #nav-links .drop-item .sub-menu {
-          display: none;
-          height: 0px;
-          color: #181A20;
-          background: #ffffff;
-          border-radius: .6rem;
-          box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05);
-          transition: height 500ms !important; }
-        #header .mobile-bar .sidebar .side-content #nav-links .drop-item .ss-menu {
-          display: block;
-          overflow: auto;
-          height: auto;
-          position: static;
-          transform: none; }
-        #header .mobile-bar .sidebar .side-content #nav-links .drop-item .aeroActive {
-          transform: rotate(90deg);
-          transition: all .1s ease-in-out; }
-    #header .mobile-bar .sideActive {
-      left: 0px !important; }
+        color: #181A20; }
+      #header .sidebar .side-header #closeMenu {
+        color: #ffffff;
+        background: #ee4c34;
+        border-radius: 50%;
+        padding: .8rem 1.5rem; }
+    #header .sidebar .side-content #nav-links .drop-item {
+      width: 100%;
+      font-weight: 600;
+      border-radius: 6rem;
+      padding: .8rem 1.5rem;
+      transition: all .25s linear;
+      position: relative;
+      cursor: pointer; }
+      #header .sidebar .side-content #nav-links .drop-item .list-item {
+        color: #181A20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      #header .sidebar .side-content #nav-links .drop-item .sub-menu {
+        display: none;
+        height: 0px;
+        color: #181A20;
+        background: #ffffff;
+        border-radius: .6rem;
+        box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05);
+        transition: height 500ms !important; }
+      #header .sidebar .side-content #nav-links .drop-item .ss-menu {
+        display: block;
+        overflow: auto;
+        height: auto;
+        position: static;
+        transform: none; }
+      #header .sidebar .side-content #nav-links .drop-item .aeroActive {
+        transform: rotate(90deg);
+        transition: all .1s ease-in-out; }
+@keyframes left-right {
+  0% {
+    transform: translate3d(-100%, 0, 0); }
+  100% {
+    transform: translateZ(0); } }
+  #header .sideActive {
+    opacity: 1;
+    animation: left-right .3s ease-in-out both;
+    visibility: visible; }
 
 @media (max-width: 1120px) {
   #header .desktop-bar {

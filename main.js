@@ -1,11 +1,15 @@
 //sticky bar for window scroll
 window.addEventListener("scroll", () => {
-    const stickyBar = document.querySelector("#header");
+    const stickyDesk = document.querySelector(".desktop-bar");
+    const stickyMob = document.querySelector(".mobile-bar");
 
-    if (window.scrollY > 10) {
-        stickyBar.classList.add("sticky");
+    if (window.scrollY > 0) {
+        stickyDesk.classList.add("sticky");
+        stickyMob.classList.add("sticky");
+
     } else {
-        stickyBar.classList.remove("sticky");
+        stickyDesk.classList.remove("sticky");
+        stickyMob.classList.remove("sticky");
     }
 })
 

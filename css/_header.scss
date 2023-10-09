@@ -1,47 +1,49 @@
 @import "variable";
 
-.sticky {
-    box-shadow: 0 1px 4px rgba(24, 26, 32, .07);
-    position: fixed;
-    color: $second-color;
-    background: $bg-light;
-    animation-name: slideDown;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-
-    @keyframes slideDown {
-        0% {
-            transform: translate3d(0, -100%, 0);
-        }
-
-        100% {
-            transform: translateZ(0);
-        }
-    }
-
-    .left #nav-links .drop-item .list-item {
-        color: $second-color !important;
-    }
-
-    .desktop-bar .right .property-btn {
-        border: 1px solid $second-color !important;
-    }
-
-    .desktop-bar .left .logo-box .wh-img {
-        display: none;
-    }
-
-    .desktop-bar .left .logo-box .b-img {
-        display: block !important;
-    }
-}
-
 #header {
     width: 100%;
     font-size: 1.5rem;
     border-bottom: 1px solid hsla(0, 0%, 100%, .07);
+    position: relative;
+
+    .sticky {
+        box-shadow: 0 1px 4px rgba(24, 26, 32, .07);
+        position: fixed;
+        color: $second-color;
+        background: $bg-light;
+        animation-name: slideDown;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+
+        @keyframes slideDown {
+            0% {
+                transform: translate3d(0, -100%, 0);
+            }
+
+            100% {
+                transform: translateZ(0);
+            }
+        }
+
+        .left #nav-links .drop-item .list-item {
+            color: $second-color !important;
+        }
+
+        .right .property-btn {
+            border: 1px solid $second-color !important;
+        }
+
+        .left .logo-box .wh-img {
+            display: none;
+        }
+
+        .left .logo-box .b-img {
+            display: block !important;
+        }
+    }
 
     .desktop-bar {
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -231,6 +233,7 @@
     }
 
     .mobile-bar {
+        width: 100%;
         font-size: 2rem;
         color: $second-color;
         background: $primary-color;
@@ -242,87 +245,102 @@
         .logo-box {
             cursor: pointer;
         }
+    }
 
-        .sidebar {
-            width: 280px;
-            height: 100%;
-            background: $primary-color;
-            overflow-x: hidden;
-            overflow-y: auto;
-            position: fixed;
-            left: -100%;
-            top: 0;
-            transition: all .25s linear;
-            box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+    .sidebar {
+        width: 280px;
+        height: 100%;
+        background: $primary-color;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .25s ease-in-out;
+        box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
 
-            .side-header {
-                background: $bg-light;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 2rem 1.25rem;
+        .side-header {
+            background: $bg-light;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 1.25rem;
 
-                h4 {
-                    font-size: 2rem;
-                    font-weight: 600;
-                }
-
-                #closeMenu {
-                    color: $primary-color;
-                    background: $bg-color-2;
-                    border-radius: 50%;
-                    padding: .8rem 1.5rem;
-                }
+            h4 {
+                font-size: 2rem;
+                font-weight: 600;
+                color: $second-color;
             }
 
-            .side-content {
+            #closeMenu {
+                color: $primary-color;
+                background: $bg-color-2;
+                border-radius: 50%;
+                padding: .8rem 1.5rem;
+            }
+        }
 
-                #nav-links {
-                    .drop-item {
-                        width: 100%;
-                        font-weight: 600;
-                        border-radius: 6rem;
-                        padding: .8rem 1.5rem;
-                        transition: all .25s linear;
-                        position: relative;
-                        cursor: pointer;
+        .side-content {
 
-                        .list-item {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                        }
+            #nav-links {
+                .drop-item {
+                    width: 100%;
+                    font-weight: 600;
+                    border-radius: 6rem;
+                    padding: .8rem 1.5rem;
+                    transition: all .25s linear;
+                    position: relative;
+                    cursor: pointer;
 
-                        .sub-menu {
-                            display: none;
-                            height: 0px;
-                            color: $second-color;
-                            background: $primary-color;
-                            border-radius: .6rem;
-                            box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
-                            transition: height 500ms !important;
-                        }
+                    .list-item {
+                        color: $second-color;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
 
-                        .ss-menu {
-                            display: block;
-                            overflow: auto;
-                            height: auto;
-                            position: static;
-                            transform: none;
-                        }
+                    .sub-menu {
+                        display: none;
+                        height: 0px;
+                        color: $second-color;
+                        background: $primary-color;
+                        border-radius: .6rem;
+                        box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+                        transition: height 500ms !important;
+                    }
 
-                        .aeroActive {
-                            transform: rotate(90deg);
-                            transition: all .1s ease-in-out;
-                        }
+                    .ss-menu {
+                        display: block;
+                        overflow: auto;
+                        height: auto;
+                        position: static;
+                        transform: none;
+                    }
+
+                    .aeroActive {
+                        transform: rotate(90deg);
+                        transition: all .1s ease-in-out;
                     }
                 }
             }
         }
+    }
 
-        .sideActive {
-            left: 0px !important;
+    @keyframes left-right {
+        0% {
+            transform: translate3d(-100%, 0, 0);
         }
+
+        100% {
+            transform: translateZ(0);
+        }
+    }
+
+    .sideActive {
+        opacity: 1;
+        animation: left-right .3s ease-in-out both;
+        visibility: visible;
     }
 }
 
