@@ -1,5 +1,4 @@
 #home {
-    // height: 100%;
     color: $primary-color;
     font-size: 1.5rem;
     text-align: center;
@@ -17,7 +16,7 @@
     }
 
     .content {
-        max-width: 1000px;
+        max-width: 900px;
         width: 100%;
         text-align: center;
 
@@ -54,17 +53,18 @@
             }
 
             .tab-content {
-                width: 100%;
+                // width: 100%;
                 background-color: $primary-color;
-                padding: 1.5rem;
+                padding: 2rem;
+                border-radius: 0 .9rem .9rem .9rem;
 
                 .row {
-                    width: 100%;
                     display: flex;
                     gap: 3rem;
 
                     .col-1 {
-                        flex: 1;
+                        flex: 0 0 auto;
+                        width: 75%;
 
                         input {
                             background: #f7f7f7;
@@ -77,32 +77,45 @@
                     }
 
                     .col-2 {
+                        width: 25%;
                         display: flex;
-                        gap: 2rem;
                         align-items: center;
+
+                        button {
+                            width: 100%;
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                        }
 
                         .setting {
                             display: inherit;
+                            cursor: pointer;
 
                             .sIcon {
                                 margin-right: .5rem;
                             }
                         }
 
-                        button {
-                            background: transparent;
-                            width: 100%;
-                            border: none;
-                            border-radius: .6rem;
-                            outline: none;
+                        .search-icon {
+                            width: 55px;
+                            height: 55px;
+                            color: $primary-color;
+                            background: $bg-color-1;
+                            border-radius: 50%;
+                            padding: 0 2rem;
+                            transition: all .25s linear;
+
+                            &:hover {
+                                background: $bg-color-2;
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
             }
         }
     }
-
-
 
 
 }
