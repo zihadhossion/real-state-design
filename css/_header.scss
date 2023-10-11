@@ -81,7 +81,7 @@
                 align-items: center;
 
                 .drop-item {
-                    font-weight: 600;
+                    font-weight: 500;
                     border-radius: 6rem;
                     padding: .8rem 1.5rem;
                     transition: all .25s linear;
@@ -90,8 +90,10 @@
 
                     .list-item {
                         color: $primary-color;
+                        text-transform: capitalize;
 
                         span:nth-child(2) {
+                            font-size: 1.25rem;
                             margin-left: .6rem;
                         }
 

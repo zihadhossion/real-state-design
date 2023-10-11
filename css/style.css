@@ -72,15 +72,17 @@ li {
         display: flex;
         align-items: center; }
         #header .desktop-bar .left #nav-links .drop-item {
-          font-weight: 600;
+          font-weight: 500;
           border-radius: 6rem;
           padding: .8rem 1.5rem;
           transition: all .25s linear;
           position: relative;
           cursor: pointer; }
           #header .desktop-bar .left #nav-links .drop-item .list-item {
-            color: #ffffff; }
+            color: #ffffff;
+            text-transform: capitalize; }
             #header .desktop-bar .left #nav-links .drop-item .list-item span:nth-child(2) {
+              font-size: 1.25rem;
               margin-left: .6rem; }
             #header .desktop-bar .left #nav-links .drop-item .list-item .fa-chevron-down {
               font-weight: 600; }
@@ -303,20 +305,27 @@ li {
     #home .content .search-content {
       width: 100%; }
       #home .content .search-content .nav-tabs {
-        max-width: 240px;
+        max-width: 250px;
         display: flex;
-        gap: 3rem;
         background-color: #ffffff;
-        padding: 1.5rem 3rem;
-        border-bottom: 1px solid #181a20;
+        padding: 0rem 1rem;
+        border-bottom: 1px solid #ddd;
         border-top-left-radius: .9rem;
         border-top-right-radius: .9rem; }
+        #home .content .search-content .nav-tabs .btn-active {
+          color: #181a20;
+          border-color: transparent transparent #181a20; }
         #home .content .search-content .nav-tabs button {
+          color: #717171;
           font-size: 1.5rem;
           font-weight: 600;
           background: transparent;
-          border: none;
-          outline: none; }
+          border: transparent;
+          border-bottom: 2px solid transparent;
+          outline: none;
+          padding: 2rem;
+          cursor: pointer;
+          margin-right: 1rem; }
       #home .content .search-content .tab-content {
         background-color: #ffffff;
         padding: 2rem;
@@ -349,12 +358,13 @@ li {
               #home .content .search-content .tab-content .row .col-2 .setting .sIcon {
                 margin-right: .5rem; }
             #home .content .search-content .tab-content .row .col-2 .search-icon {
-              width: 55px;
+              display: block;
+              width: 75px;
               height: 55px;
               color: #ffffff;
               background: #eb6753;
               border-radius: 50%;
-              padding: 0 2rem;
+              line-height: 55px;
               transition: all .25s linear; }
               #home .content .search-content .tab-content .row .col-2 .search-icon:hover {
                 background: #ee4c34;

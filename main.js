@@ -43,3 +43,12 @@ for (const ele of subMenu) {
     })
 }
 
+
+const btnActive = document.querySelectorAll("#home .nav-tabs button");
+
+for (const btn of btnActive) {
+    btn.addEventListener("click", () => {
+        document.querySelector(".btn-active")?.classList.remove("btn-active");
+        btn.classList.add("btn-active");
+    })
+}

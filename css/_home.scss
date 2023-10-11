@@ -34,26 +34,34 @@
             width: 100%;
 
             .nav-tabs {
-                max-width: 240px;
+                max-width: 250px;
                 display: flex;
-                gap: 3rem;
                 background-color: $primary-color;
-                padding: 1.5rem 3rem;
-                border-bottom: 1px solid $second-color;
+                padding: 0rem 1rem;
+                border-bottom: 1px solid #ddd;
                 border-top-left-radius: .9rem;
                 border-top-right-radius: .9rem;
 
+                .btn-active {
+                    color: $second-color;
+                    border-color: transparent transparent $second-color;
+                }
+
                 button {
+                    color: #717171;
                     font-size: 1.5rem;
                     font-weight: 600;
                     background: transparent;
-                    border: none;
+                    border: transparent;
+                    border-bottom: 2px solid transparent;
                     outline: none;
+                    padding: 2rem;
+                    cursor: pointer;
+                    margin-right: 1rem;
                 }
             }
 
             .tab-content {
-                // width: 100%;
                 background-color: $primary-color;
                 padding: 2rem;
                 border-radius: 0 .9rem .9rem .9rem;
@@ -98,12 +106,13 @@
                         }
 
                         .search-icon {
-                            width: 55px;
+                            display: block;
+                            width: 75px;
                             height: 55px;
                             color: $primary-color;
                             background: $bg-color-1;
                             border-radius: 50%;
-                            padding: 0 2rem;
+                            line-height: 55px;
                             transition: all .25s linear;
 
                             &:hover {
@@ -116,6 +125,4 @@
             }
         }
     }
-
-
 }
