@@ -32,6 +32,7 @@
 
         .search-content {
             width: 100%;
+            margin-top: 7rem;
 
             .nav-tabs {
                 max-width: 250px;
@@ -68,11 +69,13 @@
 
                 .row {
                     display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
                     gap: 3rem;
 
                     .col-1 {
                         flex: 0 0 auto;
-                        width: 75%;
+                        width: 70%;
 
                         input {
                             background: #f7f7f7;
@@ -90,19 +93,14 @@
                         align-items: center;
 
                         button {
-                            width: 100%;
                             background: transparent;
                             border: none;
                             outline: none;
+                            cursor: pointer;
                         }
 
                         .setting {
-                            display: inherit;
-                            cursor: pointer;
-
-                            .sIcon {
-                                margin-right: .5rem;
-                            }
+                            width: 100%;
                         }
 
                         .search-icon {
@@ -117,12 +115,47 @@
 
                             &:hover {
                                 background: $bg-color-2;
-                                cursor: pointer;
                             }
                         }
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width:992px) {
+    #home .content {
+        max-width: 700px;
+    }
+}
+
+@media (max-width:768px) {
+    #home .content {
+        max-width: 480px;
+
+        .search-content .tab-content .row {
+
+            .col-1,
+            .col-2 {
+                width: 100%;
+            }
+
+            .col-2 {
+                justify-content: center;
+                gap: 3rem;
+
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    #home .content {
+        max-width: 300px;
+
+        .search-content .tab-content {
+            border-radius: 0 0 .9rem .9rem;
         }
     }
 }
