@@ -20,19 +20,30 @@
         width: 100%;
         text-align: center;
 
-        .title {
-            font-weight: 500;
+        .sub-title {
+            font-weight: 400;
             text-transform: uppercase;
-            letter-spacing: .5rem;
+            letter-spacing: .1rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp .25s .2s both;
+        }
+
+        .title {
+            font-size: 5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            animation: fadeInUp .35s .3s both;
         }
 
         .desc {
-            font-size: 5rem;
+            font-weight: 400;
+            animation: fadeInUp .45s .4s both;
         }
 
         .search-content {
             width: 100%;
             margin-top: 7rem;
+            animation: fadeInUp .55s .5s both;
 
             .nav-tabs {
                 max-width: 250px;
@@ -120,6 +131,18 @@
                     }
                 }
             }
+        }
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
         }
     }
 }

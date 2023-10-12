@@ -12,9 +12,7 @@
         position: fixed;
         color: $second-color;
         background: #fff;
-        animation-name: slideDown;
-        animation-duration: 1s;
-        animation-fill-mode: both;
+        animation: slideDown 1s both;
         z-index: 99;
 
         @keyframes slideDown {
@@ -27,20 +25,24 @@
             }
         }
 
-        .left #nav-links .drop-item .list-item {
-            color: $second-color !important;
-        }
+        .left {
+            .logo-box {
+                .wh-img {
+                    display: none;
+                }
 
-        .right .property-btn {
-            border: 1px solid $second-color !important;
-        }
+                .b-img {
+                    display: block !important;
+                }
+            }
 
-        .left .logo-box .wh-img {
-            display: none;
-        }
-
-        .left .logo-box .b-img {
-            display: block !important;
+            #nav-links {
+                .drop-item {
+                    .list-item {
+                        color: $second-color !important;
+                    }
+                }
+            }
         }
 
         .right {
@@ -302,7 +304,6 @@
         }
 
         .side-content {
-
             #nav-links {
                 .drop-item {
                     width: 100%;
@@ -347,6 +348,12 @@
         }
     }
 
+    .sideActive {
+        opacity: 1;
+        animation: left-right .3s ease-in-out both;
+        visibility: visible;
+    }
+
     @keyframes left-right {
         0% {
             transform: translate3d(-100%, 0, 0);
@@ -356,14 +363,7 @@
             transform: translateZ(0);
         }
     }
-
-    .sideActive {
-        opacity: 1;
-        animation: left-right .3s ease-in-out both;
-        visibility: visible;
-    }
 }
-
 
 @media (max-width:1200px) {
     #header .desktop-bar .right .account span {
