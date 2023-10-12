@@ -10,122 +10,126 @@
     .container {
         width: 100%;
         height: 860px;
-        display: grid;
-        place-items: center;
-        text-align: center;
-    }
-
-    .content {
-        max-width: 900px;
-        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
 
-        .sub-title {
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: .1rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp .25s .2s both;
-        }
-
-        .title {
-            font-size: 5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            animation: fadeInUp .35s .3s both;
-        }
-
-        .desc {
-            font-weight: 400;
-            animation: fadeInUp .45s .4s both;
-        }
-
-        .search-content {
+        .content {
             width: 100%;
-            margin-top: 7rem;
-            animation: fadeInUp .55s .5s both;
+            text-align: center;
+            display: grid;
+            place-items: center;
+            padding: 0 2rem;
 
-            .nav-tabs {
-                max-width: 250px;
-                display: flex;
-                background-color: $primary-color;
-                padding: 0rem 1rem;
-                border-bottom: 1px solid #ddd;
-                border-top-left-radius: .9rem;
-                border-top-right-radius: .9rem;
-
-                .btn-active {
-                    color: $second-color;
-                    border-color: transparent transparent $second-color;
-                }
-
-                button {
-                    color: #717171;
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    background: transparent;
-                    border: transparent;
-                    border-bottom: 2px solid transparent;
-                    outline: none;
-                    padding: 2rem;
-                    cursor: pointer;
-                    margin-right: 1rem;
-                }
+            .sub-title {
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+                margin-bottom: 1rem;
+                animation: fadeInUp .25s .2s both;
             }
 
-            .tab-content {
-                background-color: $primary-color;
-                padding: 2rem;
-                border-radius: 0 .9rem .9rem .9rem;
+            .title {
+                font-size: 5rem;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                animation: fadeInUp .35s .3s both;
+            }
 
-                .row {
+            .desc {
+                font-weight: 400;
+                animation: fadeInUp .45s .4s both;
+            }
+
+            .search-content {
+                width: 100%;
+                max-width: 900px;
+                margin-top: 7rem;
+                animation: fadeInUp .55s .5s both;
+
+                .nav-tabs {
+                    max-width: 250px;
                     display: flex;
-                    align-items: center;
-                    flex-wrap: wrap;
-                    gap: 3rem;
+                    background-color: $primary-color;
+                    padding: 0rem 1rem;
+                    border-bottom: 1px solid #ddd;
+                    border-top-left-radius: .9rem;
+                    border-top-right-radius: .9rem;
 
-                    .col-1 {
-                        flex: 0 0 auto;
-                        width: 70%;
-
-                        input {
-                            background: $bg-white;
-                            width: 100%;
-                            border: none;
-                            border-radius: .6rem;
-                            outline: none;
-                            padding: 1.5rem 3rem;
-                        }
+                    .btn-active {
+                        color: $second-color;
+                        border-color: transparent transparent $second-color;
                     }
 
-                    .col-2 {
-                        width: 25%;
+                    button {
+                        color: #717171;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        background: transparent;
+                        border: transparent;
+                        border-bottom: 2px solid transparent;
+                        outline: none;
+                        padding: 2rem;
+                        cursor: pointer;
+                        margin-right: 1rem;
+                    }
+                }
+
+                .tab-content {
+                    background-color: $primary-color;
+                    padding: 2rem;
+                    border-radius: 0 .9rem .9rem .9rem;
+
+                    .row {
                         display: flex;
                         align-items: center;
+                        flex-wrap: wrap;
+                        gap: 3rem;
 
-                        button {
-                            background: transparent;
-                            border: none;
-                            outline: none;
-                            cursor: pointer;
+                        .col-1 {
+                            flex: 0 0 auto;
+                            width: 70%;
+
+                            input {
+                                background: $bg-white;
+                                width: 100%;
+                                border: none;
+                                border-radius: .6rem;
+                                outline: none;
+                                padding: 1.5rem 3rem;
+                            }
                         }
 
-                        .setting {
-                            width: 100%;
-                        }
+                        .col-2 {
+                            width: 25%;
+                            display: flex;
+                            align-items: center;
 
-                        .search-icon {
-                            display: block;
-                            width: 75px;
-                            height: 55px;
-                            color: $primary-color;
-                            background: $bg-color-1;
-                            border-radius: 50%;
-                            line-height: 55px;
-                            transition: all .25s linear;
+                            button {
+                                background: transparent;
+                                border: none;
+                                outline: none;
+                                cursor: pointer;
+                            }
 
-                            &:hover {
-                                background: $bg-color-2;
+                            .setting {
+                                width: 100%;
+                            }
+
+                            .search-icon {
+                                display: block;
+                                width: 75px;
+                                height: 55px;
+                                color: $primary-color;
+                                background: $bg-color-1;
+                                border-radius: 50%;
+                                line-height: 55px;
+                                transition: all .25s linear;
+
+                                &:hover {
+                                    background: $bg-color-2;
+                                }
                             }
                         }
                     }
@@ -148,16 +152,16 @@
 }
 
 @media (max-width:992px) {
-    #home .content {
+    #home .container .content .search-content {
         max-width: 700px;
     }
 }
 
 @media (max-width:768px) {
-    #home .content {
-        max-width: 480px;
+    #home .container .content .search-content {
+        max-width: 500px;
 
-        .search-content .tab-content .row {
+        .tab-content .row {
 
             .col-1,
             .col-2 {
@@ -174,11 +178,13 @@
 }
 
 @media (max-width:500px) {
-    #home .content {
-        max-width: 300px;
+    #home .container .content {
+        .title {
+            font-size: 3rem;
+        }
 
-        .search-content .tab-content {
-            border-radius: 0 0 .9rem .9rem;
+        .search-content {
+            max-width: 350px;
         }
     }
 }
