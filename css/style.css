@@ -391,9 +391,60 @@ li {
     #home .content .search-content .tab-content {
       border-radius: 0 0 .9rem .9rem; } }
 #explore-property {
-  min-height: 100vh;
   color: #000;
-  background: #fff; }
+  background: #fff;
+  font-size: 1.5rem;
+  padding: 12rem 0; }
+  #explore-property .container {
+    max-width: 1320px;
+    margin: 0 auto; }
+    #explore-property .container .row-1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    #explore-property .container .row-2 {
+      margin-top: 5rem; }
+      #explore-property .container .row-2 .col {
+        margin-top: 3rem; }
+        #explore-property .container .row-2 .col .item {
+          width: 100%;
+          max-width: 250px;
+          color: #181a20;
+          background: #f7f7f7;
+          border-radius: 1rem;
+          padding: 3rem;
+          transition: all .3s linear; }
+          #explore-property .container .row-2 .col .item .exIcon {
+            font-size: 3rem;
+            display: block;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 1rem;
+            margin-bottom: 6rem;
+            transition: all .3s linear; }
+            #explore-property .container .row-2 .col .item .exIcon:hover {
+              color: #f7f7f7;
+              background: rgba(255, 255, 255, 0.1); }
+          #explore-property .container .row-2 .col .item .text {
+            color: #181a20; }
+            #explore-property .container .row-2 .col .item .text h6 {
+              font-size: 1.5rem;
+              font-weight: 600;
+              margin-bottom: .5rem; }
+            #explore-property .container .row-2 .col .item .text p {
+              font-size: 1.4rem;
+              font-weight: 400; }
+          #explore-property .container .row-2 .col .item:hover {
+            color: #f7f7f7;
+            background: #181a20; }
+            #explore-property .container .row-2 .col .item:hover .exIcon {
+              color: #f7f7f7;
+              background: rgba(255, 255, 255, 0.1); }
+            #explore-property .container .row-2 .col .item:hover .text {
+              color: #ffffff; }
 
 #category {
   min-height: 100vh;
