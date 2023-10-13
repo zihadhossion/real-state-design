@@ -20,59 +20,64 @@
             .col {
                 margin-top: 3rem;
 
-                .item {
-                    width: 100%;
-                    max-width: 250px;
-                    color: $second-color;
-                    background: $bg-white;
-                    border-radius: 1rem;
-                    padding: 3rem;
-                    transition: all .3s linear;
+                .slider {
+                    display: flex;
+                    gap: 2rem;
 
-                    .exIcon {
-                        font-size: 3rem;
-                        display: block;
-                        width: 70px;
-                        height: 70px;
-                        text-align: center;
-                        background: $primary-color;
-                        border-radius: 50%;
-                        padding: 1rem;
-                        margin-bottom: 6rem;
+                    .item {
+                        width: 100%;
+                        max-width: 250px;
+                        color: $second-color;
+                        background: $bg-white;
+                        border-radius: 1rem;
+                        padding: 3rem;
                         transition: all .3s linear;
 
-                        &:hover {
-                            color: $bg-white;
-                            background: hsla(0, 0%, 100%, .1);
-                        }
-                    }
-
-                    .text {
-                        color: $second-color;
-
-                        h6 {
-                            font-size: 1.5rem;
-                            font-weight: 600;
-                            margin-bottom: .5rem;
-                        }
-
-                        p {
-                            font-size: 1.4rem;
-                            font-weight: 400;
-                        }
-                    }
-
-                    &:hover {
-                        color: $bg-white;
-                        background: $second-color;
-
                         .exIcon {
-                            color: $bg-white;
-                            background: hsla(0, 0%, 100%, .1);
+                            font-size: 3rem;
+                            display: block;
+                            width: 70px;
+                            height: 70px;
+                            text-align: center;
+                            background: $primary-color;
+                            border-radius: 50%;
+                            padding: 1rem;
+                            margin-bottom: 6rem;
+                            transition: all .3s linear;
+
+                            &:hover {
+                                color: $bg-white;
+                                background: hsla(0, 0%, 100%, .1);
+                            }
                         }
 
                         .text {
-                            color: $primary-color;
+                            color: $second-color;
+
+                            h6 {
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin-bottom: .5rem;
+                            }
+
+                            p {
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                            }
+                        }
+
+                        &:hover {
+                            color: $bg-white;
+                            background: $second-color;
+
+                            .exIcon {
+                                color: $bg-white;
+                                background: hsla(0, 0%, 100%, .1);
+                            }
+
+                            .text {
+                                color: $primary-color;
+                            }
                         }
                     }
                 }
