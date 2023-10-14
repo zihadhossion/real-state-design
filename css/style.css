@@ -16,6 +16,10 @@ a {
 li {
   list-style-type: none; }
 
+.container {
+  max-width: 1320px;
+  margin: 0 auto; }
+
 #header {
   width: 100%;
   display: block;
@@ -23,7 +27,7 @@ li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   background-color: transparent;
   position: fixed;
-  z-index: 1; }
+  z-index: 9; }
   #header .sticky {
     box-shadow: 0 1px 4px rgba(24, 26, 32, 0.07);
     position: fixed;
@@ -398,7 +402,8 @@ li {
   color: #000;
   background: #fff;
   font-size: 1.5rem;
-  padding: 12rem 0; }
+  padding: 12rem 0;
+  position: relative; }
   #explore-property .container {
     max-width: 1320px;
     margin: 0 auto; }
@@ -406,6 +411,16 @@ li {
       display: flex;
       align-items: center;
       justify-content: space-between; }
+      #explore-property .container .row-1 .text {
+        opacity: 0; }
+      #explore-property .container .row-1 .swiperBtn {
+        display: flex;
+        gap: 1rem;
+        max-width: 200px; }
+        #explore-property .container .row-1 .swiperBtn .swiper-button-prev {
+          font-size: 1rem; }
+        #explore-property .container .row-1 .swiperBtn .swiper-button-next {
+          font-size: 5rem; }
     #explore-property .container .row-2 {
       margin-top: 5rem; }
       #explore-property .container .row-2 .col {
@@ -452,10 +467,45 @@ li {
                 background: rgba(255, 255, 255, 0.1); }
               #explore-property .container .row-2 .col .slider .item:hover .text {
                 color: #ffffff; }
-
+  #explore-property .inOut-ani {
+    animation: fadeInUp .25s linear .2s both;
+    opacity: 1; }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
 #category {
-  min-height: 100vh;
-  background: #000;
-  color: #fff; }
+  font-size: 1.5rem;
+  text-align: center; }
+  #category .container .row-2 .card {
+    max-width: 300px;
+    border-radius: 1rem;
+    padding: 6rem 3.5rem 2rem;
+    transition: all .3s linear; }
+    #category .container .row-2 .card img {
+      width: 150px;
+      height: 150px; }
+    #category .container .row-2 .card .btn {
+      font-size: 1.5rem;
+      font-weight: 600;
+      background: transparent;
+      border: 1px solid #ffffff;
+      outline: none;
+      border-radius: 6rem;
+      padding: 1.25rem 2.2rem;
+      transition: all .3s linear;
+      cursor: pointer; }
+      #category .container .row-2 .card .btn:hover {
+        color: #ffffff;
+        background: #181a20; }
+      #category .container .row-2 .card .btn i {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        transform: rotate(-45deg); }
+    #category .container .row-2 .card:hover {
+      box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
 
 /*# sourceMappingURL=style.css.map */

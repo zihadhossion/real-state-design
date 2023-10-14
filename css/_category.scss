@@ -1,5 +1,48 @@
 #category {
-    min-height: 100vh;
-    background: #000;
-    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+
+    .container {
+        .row-2 {
+            .card {
+                max-width: 300px;
+                border-radius: 1rem;
+                padding: 6rem 3.5rem 2rem;
+                transition: all .3s linear;
+
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .btn {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    background: transparent;
+                    border: 1px solid $primary-color;
+                    outline: none;
+                    border-radius: 6rem;
+                    padding: 1.25rem 2.2rem;
+                    transition: all .3s linear;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $primary-color;
+                        background: $second-color;
+                    }
+
+                    i {
+                        font-size: 1.5rem;
+                        margin-left: 1rem;
+                        transform: rotate(-45deg);
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+                }
+
+            }
+        }
+    }
 }

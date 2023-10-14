@@ -26,8 +26,6 @@ closeBar.addEventListener("click", () => {
     sideBar.classList.remove("sideActive");
 })
 
-
-
 //sub menu show/hide 
 const subMenu = document.querySelectorAll(".side-content .list-item");
 const rightAeros = document.querySelectorAll(".sidebar .fa-chevron-right");
@@ -43,7 +41,6 @@ for (const ele of subMenu) {
     })
 }
 
-
 const btnActive = document.querySelectorAll("#home .nav-tabs button");
 
 for (const btn of btnActive) {
@@ -54,15 +51,37 @@ for (const btn of btnActive) {
 }
 //Initialize Swiper
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
+    slidesPerView: 4,
     spaceBetween: 30,
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
 });
+
+
+// Create the observer like the examples above
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('inOut-ani');
+            return;
+        }
+        entry.target.classList.remove('inOut-ani');
+    });
+});
+
+const exploreItem = document.querySelectorAll('#explore-property .in-out');
+
+// Loop over the elements and add each one to the observer
+exploreItem.forEach((element) => observer.observe(element));
