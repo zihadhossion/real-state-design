@@ -1,0 +1,54 @@
+#featured-list {
+    font-size: 1.5rem;
+    background: #F7F7F7;
+    padding: 12rem 0;
+
+    .container {
+        // max-width: 1200px;
+
+        .row-1 {
+            margin-bottom: 5rem;
+
+            .title {
+                font-size: 3rem;
+            }
+
+            .txt {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem;
+            }
+        }
+
+        .row-2 {
+            .item {
+                width: 380px;
+                position: relative;
+                background: #fff;
+
+                article {
+                    padding: 2rem;
+
+                    .list-icon {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 3rem;
+                    }
+
+                    .divider {
+                        width: 100%;
+                        margin: 1rem 0;
+                        height: 1px;
+                        background: #ddd;
+                    }
+
+                    .icon-footer {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+            }
+        }
+    }
+}

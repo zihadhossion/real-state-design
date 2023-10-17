@@ -17,9 +17,23 @@ li {
   list-style-type: none; }
 
 .container {
-  max-width: 1320px;
   margin: 0 auto; }
 
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; } }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px; } }
 #header {
   width: 100%;
   display: block;
@@ -59,7 +73,8 @@ li {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem 0; }
+    padding: 2rem 0;
+    position: relative; }
     #header .desktop-bar .left {
       display: flex;
       align-items: center;
@@ -479,7 +494,8 @@ li {
     transform: translateY(0px); } }
 #category {
   font-size: 1.5rem;
-  text-align: center; }
+  text-align: center;
+  padding: 12rem 0; }
   #category .container .row-2 .card {
     max-width: 300px;
     border-radius: 1rem;
@@ -507,5 +523,37 @@ li {
         transform: rotate(-45deg); }
     #category .container .row-2 .card:hover {
       box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
+
+#featured-list {
+  font-size: 1.5rem;
+  background: #F7F7F7;
+  padding: 12rem 0; }
+  #featured-list .container .row-1 {
+    margin-bottom: 5rem; }
+    #featured-list .container .row-1 .title {
+      font-size: 3rem; }
+    #featured-list .container .row-1 .txt {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem; }
+  #featured-list .container .row-2 .item {
+    width: 380px;
+    position: relative;
+    background: #fff; }
+    #featured-list .container .row-2 .item article {
+      padding: 2rem; }
+      #featured-list .container .row-2 .item article .list-icon {
+        display: flex;
+        align-items: center;
+        column-gap: 3rem; }
+      #featured-list .container .row-2 .item article .divider {
+        width: 100%;
+        margin: 1rem 0;
+        height: 1px;
+        background: #ddd; }
+      #featured-list .container .row-2 .item article .icon-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
 
 /*# sourceMappingURL=style.css.map */
