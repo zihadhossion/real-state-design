@@ -4,7 +4,6 @@
     padding: 12rem 0;
 
     .container {
-        // max-width: 1200px;
 
         .row-1 {
             margin-bottom: 5rem;
@@ -20,19 +19,88 @@
             }
         }
 
+
         .row-2 {
             .item {
                 width: 380px;
                 position: relative;
                 background: #fff;
+                overflow: hidden;
 
-                article {
+                .list-thumb {
+                    position: relative;
+                    overflow: hidden;
+
+                    .sticker {
+                        color: $primary-color;
+                        background: $color-1;
+                        font-size: 1.25rem;
+                        text-transform: uppercase;
+                        padding: .5rem 1rem;
+                        border-radius: .6rem;
+                        position: absolute;
+                        left: 20px;
+                        top: 20px;
+                    }
+
+                    .image {
+                        position: relative;
+                        width: 100%;
+                        transition: all .25s linear;
+                    }
+
+                    .price {
+                        background: $primary-color;
+                        padding: .5rem .75rem;
+                        border-radius: .6rem;
+                        position: absolute;
+                        left: 20px;
+                        bottom: 20px;
+                    }
+                }
+
+                .list-content {
                     padding: 2rem;
+                    color: #717171;
+
+                    .title {
+                        color: $second-color;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        line-height: 2.5rem;
+                    }
+
+                    .desc {
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        line-height: 2.75rem;
+                        margin-bottom: 1.5rem;
+                    }
 
                     .list-icon {
                         display: flex;
                         align-items: center;
                         column-gap: 3rem;
+
+                        li {
+                            font-size: 1.3rem;
+                            transition: all .2s linear;
+
+                            span {
+                                margin-left: 1rem;
+                            }
+
+                            &:hover {
+                                cursor: pointer;
+                                color: $color-1;
+                            }
+                        }
+                    }
+
+                    .list-meta {
+                        .sub-title {
+                            font-size: 1.3rem;
+                        }
                     }
 
                     .divider {
@@ -42,13 +110,37 @@
                         background: #ddd;
                     }
 
-                    .icon-footer {
+                    .list-meta {
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
                     }
                 }
+
+                &:hover {
+                    .list-thumb {
+                        .sticker {
+                            animation: slideDown .25s linear both;
+                        }
+
+                        .image {
+                            transform: scale(1.11) rotate(-1deg);
+                        }
+                    }
+                }
             }
         }
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(25px);
+        opacity: 0;
     }
 }

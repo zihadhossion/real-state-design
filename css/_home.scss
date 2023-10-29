@@ -122,13 +122,13 @@
                                 width: 75px;
                                 height: 55px;
                                 color: $primary-color;
-                                background: $bg-color-1;
+                                background: $color-1;
                                 border-radius: 50%;
                                 line-height: 55px;
                                 transition: all .25s linear;
 
                                 &:hover {
-                                    background: $bg-color-2;
+                                    background: $color-2;
                                 }
                             }
                         }
