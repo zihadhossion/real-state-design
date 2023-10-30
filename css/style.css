@@ -49,11 +49,6 @@ li {
     background: #fff;
     animation: slideDown 1s both;
     z-index: 99; }
-@keyframes slideDown {
-  0% {
-    transform: translate3d(0, -100%, 0); }
-  100% {
-    transform: translateZ(0); } }
     #header .sticky .left .logo-box .wh-img {
       display: none; }
     #header .sticky .left .logo-box .b-img {
@@ -73,19 +68,20 @@ li {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2rem 0;
+    padding: 2rem 10rem;
     position: relative; }
     #header .desktop-bar .left {
       display: flex;
       align-items: center;
-      gap: 5rem; }
+      column-gap: 5rem; }
       #header .desktop-bar .left .logo-box {
         display: flex;
         align-items: center;
         cursor: pointer; }
       #header .desktop-bar .left #nav-links {
         display: flex;
-        align-items: center; }
+        align-items: center;
+        column-gap: 2rem; }
         #header .desktop-bar .left #nav-links .drop-item {
           font-weight: 500;
           border-radius: 6rem;
@@ -278,6 +274,11 @@ li {
     transform: translate3d(-100%, 0, 0); }
   100% {
     transform: translateZ(0); } }
+@keyframes slideDown {
+  0% {
+    transform: translate3d(0, -100%, 0); }
+  100% {
+    transform: translateZ(0); } }
 @media (max-width: 1200px) {
   #header .desktop-bar .right .account span {
     display: none; } }
@@ -323,7 +324,7 @@ li {
         animation: fadeInUp .45s .4s both; }
       #home .container .content .search-content {
         width: 100%;
-        max-width: 900px;
+        max-width: 960px;
         margin-top: 7rem;
         animation: fadeInUp .55s .5s both; }
         #home .container .content .search-content .nav-tabs {
@@ -506,54 +507,50 @@ li {
       font-size: 1.4rem; }
   #category .container .row-2 {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
-    column-gap: 1rem; }
-    #category .container .row-2 .icon-box {
-      flex: 0 0 auto;
-      width: 32%; }
-      #category .container .row-2 .icon-box .card {
+    gap: 1rem; }
+    #category .container .row-2 .icon-box .card {
+      border-radius: 1rem;
+      padding: 6rem 3.5rem 2rem;
+      transition: all .3s linear; }
+      #category .container .row-2 .icon-box .card img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1rem; }
+      #category .container .row-2 .icon-box .card .title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem; }
+      #category .container .row-2 .icon-box .card .desc {
+        font-size: 1.4rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem; }
+      #category .container .row-2 .icon-box .card .btn {
+        font-size: 1.5rem;
+        font-weight: 600;
+        background: transparent;
+        border: 1px solid #181a20;
+        outline: none;
         border-radius: 1rem;
-        padding: 6rem 3.5rem 2rem;
-        transition: all .3s linear; }
-        #category .container .row-2 .icon-box .card img {
-          width: 150px;
-          height: 150px;
-          margin-bottom: 1rem; }
-        #category .container .row-2 .icon-box .card .title {
-          font-size: 2rem;
-          font-weight: 600;
-          margin-bottom: 1.5rem; }
-        #category .container .row-2 .icon-box .card .desc {
-          font-size: 1.4rem;
-          line-height: 1.7;
-          margin-bottom: 2.5rem; }
-        #category .container .row-2 .icon-box .card .btn {
+        padding: 1.7rem 2.75rem;
+        transition: all .3s linear;
+        cursor: pointer; }
+        #category .container .row-2 .icon-box .card .btn:hover {
+          color: #ffffff;
+          background: #181a20; }
+        #category .container .row-2 .icon-box .card .btn i {
           font-size: 1.5rem;
-          font-weight: 600;
-          background: transparent;
-          border: 1px solid #181a20;
-          outline: none;
-          border-radius: 1rem;
-          padding: 1.7rem 2.75rem;
-          transition: all .3s linear;
-          cursor: pointer; }
-          #category .container .row-2 .icon-box .card .btn:hover {
-            color: #ffffff;
-            background: #181a20; }
-          #category .container .row-2 .icon-box .card .btn i {
-            font-size: 1.5rem;
-            margin-left: 1rem;
-            transform: rotate(-45deg); }
-        #category .container .row-2 .icon-box .card:hover {
-          box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
+          margin-left: 1rem;
+          transform: rotate(-45deg); }
+      #category .container .row-2 .icon-box .card:hover {
+        box-shadow: 0 10px 40px rgba(24, 26, 32, 0.05); }
 
-@media (max-width: 768px) {
-  #category .container .row-2 .icon-box {
-    flex: 0 0 auto;
-    width: 40%; } }
+@media (max-width: 992px) {
+  #category .container .row-2 {
+    grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 550px) {
   #category .container .row-1 {
     margin-bottom: 3rem; }
@@ -561,96 +558,130 @@ li {
       font-size: 2.25rem; }
     #category .container .row-1 .desc {
       font-size: 1.5rem; }
-  #category .container .row-2 .icon-box {
-    width: 100%; } }
+  #category .container .row-2 {
+    grid-template-columns: 1fr; } }
 #featured-list {
   font-size: 1.5rem;
   background: #F7F7F7;
-  padding: 12rem 0; }
+  padding: 12rem 15rem; }
   #featured-list .container .row-1 {
-    margin-bottom: 5rem; }
+    margin-bottom: 7rem; }
     #featured-list .container .row-1 .title {
       font-size: 3rem; }
     #featured-list .container .row-1 .txt {
       display: flex;
       justify-content: space-between;
       margin-top: 1rem; }
-  #featured-list .container .row-2 .item {
-    width: 380px;
-    position: relative;
-    background: #fff;
-    overflow: hidden; }
-    #featured-list .container .row-2 .item .list-thumb {
+  #featured-list .container .row-2 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr); }
+    #featured-list .container .row-2 .item {
       position: relative;
-      overflow: hidden; }
-      #featured-list .container .row-2 .item .list-thumb .sticker {
-        color: #ffffff;
-        background: #eb6753;
-        font-size: 1.25rem;
-        text-transform: uppercase;
-        padding: .5rem 1rem;
-        border-radius: .6rem;
-        position: absolute;
-        left: 20px;
-        top: 20px; }
-      #featured-list .container .row-2 .item .list-thumb .image {
+      background: #fff;
+      overflow: hidden;
+      border-radius: 1rem; }
+      #featured-list .container .row-2 .item .list-thumb {
         position: relative;
-        width: 100%;
-        transition: all .25s linear; }
-      #featured-list .container .row-2 .item .list-thumb .price {
-        background: #ffffff;
-        padding: .5rem .75rem;
-        border-radius: .6rem;
-        position: absolute;
-        left: 20px;
-        bottom: 20px; }
-    #featured-list .container .row-2 .item .list-content {
-      padding: 2rem;
-      color: #717171; }
-      #featured-list .container .row-2 .item .list-content .title {
-        color: #181a20;
-        font-size: 1.5rem;
-        font-weight: 600;
-        line-height: 2.5rem; }
-      #featured-list .container .row-2 .item .list-content .desc {
-        font-size: 1.4rem;
-        font-weight: 400;
-        line-height: 2.75rem;
-        margin-bottom: 1.5rem; }
-      #featured-list .container .row-2 .item .list-content .list-icon {
-        display: flex;
-        align-items: center;
-        column-gap: 3rem; }
-        #featured-list .container .row-2 .item .list-content .list-icon li {
-          font-size: 1.3rem;
-          transition: all .2s linear; }
-          #featured-list .container .row-2 .item .list-content .list-icon li span {
-            margin-left: 1rem; }
-          #featured-list .container .row-2 .item .list-content .list-icon li:hover {
-            cursor: pointer;
-            color: #eb6753; }
-      #featured-list .container .row-2 .item .list-content .list-meta .sub-title {
-        font-size: 1.3rem; }
-      #featured-list .container .row-2 .item .list-content .divider {
-        width: 100%;
-        margin: 1rem 0;
-        height: 1px;
-        background: #ddd; }
-      #featured-list .container .row-2 .item .list-content .list-meta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; }
-    #featured-list .container .row-2 .item:hover .list-thumb .sticker {
-      animation: slideDown .25s linear both; }
-    #featured-list .container .row-2 .item:hover .list-thumb .image {
-      transform: scale(1.11) rotate(-1deg); }
-
-@keyframes slideDown {
+        overflow: hidden; }
+        #featured-list .container .row-2 .item .list-thumb .sticker {
+          color: #ffffff;
+          background: #eb6753;
+          font-size: 1.25rem;
+          text-transform: uppercase;
+          padding: .5rem 1rem;
+          border-radius: .6rem;
+          position: absolute;
+          left: 20px;
+          top: 20px; }
+        #featured-list .container .row-2 .item .list-thumb .image {
+          position: relative;
+          width: 100%;
+          transition: all .25s linear; }
+        #featured-list .container .row-2 .item .list-thumb .price {
+          background: #ffffff;
+          padding: .5rem .75rem;
+          border-radius: .6rem;
+          position: absolute;
+          left: 20px;
+          bottom: 20px; }
+      #featured-list .container .row-2 .item .list-content {
+        padding: 2rem;
+        color: #717171; }
+        #featured-list .container .row-2 .item .list-content .title {
+          color: #181a20;
+          font-size: 1.5rem;
+          font-weight: 600;
+          line-height: 2.5rem; }
+        #featured-list .container .row-2 .item .list-content .desc {
+          font-size: 1.4rem;
+          font-weight: 400;
+          line-height: 2.75rem;
+          margin-bottom: 1.5rem; }
+        #featured-list .container .row-2 .item .list-content .list-icon {
+          display: flex;
+          align-items: center;
+          column-gap: 3rem; }
+          #featured-list .container .row-2 .item .list-content .list-icon li {
+            font-size: 1.3rem;
+            transition: all .2s linear; }
+            #featured-list .container .row-2 .item .list-content .list-icon li span {
+              margin-left: 1rem; }
+            #featured-list .container .row-2 .item .list-content .list-icon li:hover {
+              cursor: pointer;
+              color: #eb6753; }
+        #featured-list .container .row-2 .item .list-content .list-meta .sub-title {
+          font-size: 1.3rem; }
+        #featured-list .container .row-2 .item .list-content .divider {
+          width: 100%;
+          margin: 1rem 0;
+          height: 1px;
+          background: #ddd; }
+        #featured-list .container .row-2 .item .list-content .list-meta {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+      #featured-list .container .row-2 .item:hover .list-thumb .sticker {
+        animation: upDown .25s linear both; }
+      #featured-list .container .row-2 .item:hover .list-thumb .image {
+        transform: scale(1.11) rotate(-1deg); }
+@keyframes upDown {
   0% {
     transform: translateY(0px);
     opacity: 1; }
   100% {
     transform: translateY(25px);
     opacity: 0; } }
+@media (max-width: 992px) {
+  #featured-list {
+    padding: 10rem; }
+    #featured-list .container .row-2 {
+      grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) {
+  #featured-list {
+    padding: 7rem; }
+    #featured-list .container .row-2 {
+      grid-template-columns: 1fr; } }
+@media (max-width: 550px) {
+  #featured-list {
+    padding: 2rem 1rem; }
+    #featured-list .container .row-1 {
+      margin-bottom: 3rem; }
+      #featured-list .container .row-1 .title {
+        font-size: 2rem; }
+      #featured-list .container .row-1 .txt {
+        flex-direction: column; }
+    #featured-list .container .row-2 {
+      gap: 2rem; }
+      #featured-list .container .row-2 .item .list-thumb {
+        font-size: 1rem; }
+        #featured-list .container .row-2 .item .list-thumb .sticker {
+          font-size: 1rem; }
+      #featured-list .container .row-2 .item .list-content {
+        padding: 1.5rem; }
+        #featured-list .container .row-2 .item .list-content .list-icon {
+          column-gap: 1.5rem; } }
 
 /*# sourceMappingURL=style.css.map */

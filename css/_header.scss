@@ -15,16 +15,6 @@
         animation: slideDown 1s both;
         z-index: 99;
 
-        @keyframes slideDown {
-            0% {
-                transform: translate3d(0, -100%, 0);
-            }
-
-            100% {
-                transform: translateZ(0);
-            }
-        }
-
         .left {
             .logo-box {
                 .wh-img {
@@ -65,13 +55,13 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 2rem 0;
+        padding: 2rem 10rem;
         position: relative;
 
         .left {
             display: flex;
             align-items: center;
-            gap: 5rem;
+            column-gap: 5rem;
 
             .logo-box {
                 display: flex;
@@ -82,6 +72,7 @@
             #nav-links {
                 display: flex;
                 align-items: center;
+                column-gap: 2rem;
 
                 .drop-item {
                     font-weight: 500;
@@ -363,6 +354,16 @@
         100% {
             transform: translateZ(0);
         }
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        transform: translateZ(0);
     }
 }
 

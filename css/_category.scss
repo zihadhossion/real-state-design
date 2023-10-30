@@ -21,16 +21,13 @@
 
         .row-2 {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             align-items: center;
             justify-content: center;
-            column-gap: 1rem;
+            gap: 1rem;
 
             .icon-box {
-                flex: 0 0 auto;
-                width: 32%;
-
                 .card {
                     border-radius: 1rem;
                     padding: 6rem 3.5rem 2rem;
@@ -86,15 +83,11 @@
     }
 }
 
-
-@media (max-width:768px) {
+@media (max-width:992px) {
     #category {
         .container {
             .row-2 {
-                .icon-box {
-                    flex: 0 0 auto;
-                    width: 40%;
-                }
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     }
@@ -116,9 +109,7 @@
             }
 
             .row-2 {
-                .icon-box {
-                    width: 100%;
-                }
+                grid-template-columns: 1fr;
             }
         }
     }

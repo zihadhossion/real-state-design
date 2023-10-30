@@ -1,12 +1,11 @@
 #featured-list {
     font-size: 1.5rem;
     background: #F7F7F7;
-    padding: 12rem 0;
+    padding: 12rem 15rem;
 
     .container {
-
         .row-1 {
-            margin-bottom: 5rem;
+            margin-bottom: 7rem;
 
             .title {
                 font-size: 3rem;
@@ -19,13 +18,19 @@
             }
         }
 
-
         .row-2 {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            column-gap: 3rem;
+            grid-template-columns: repeat(3, 1fr);
+
             .item {
-                width: 380px;
+                // width: 380px;
                 position: relative;
                 background: #fff;
                 overflow: hidden;
+                border-radius: 1rem;
 
                 .list-thumb {
                     position: relative;
@@ -120,7 +125,7 @@
                 &:hover {
                     .list-thumb {
                         .sticker {
-                            animation: slideDown .25s linear both;
+                            animation: upDown .25s linear both;
                         }
 
                         .image {
@@ -131,16 +136,82 @@
             }
         }
     }
+
+    @keyframes upDown {
+        0% {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(25px);
+            opacity: 0;
+        }
+    }
 }
 
-@keyframes slideDown {
-    0% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+@media (max-width:992px) {
+    #featured-list {
+        padding: 10rem;
 
-    100% {
-        transform: translateY(25px);
-        opacity: 0;
+        .container {
+            .row-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    #featured-list {
+        padding: 7rem;
+
+        .container {
+            .row-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+
+@media (max-width:550px) {
+    #featured-list {
+        padding: 2rem 1rem;
+
+        .container {
+            .row-1 {
+                margin-bottom: 3rem;
+
+                .title {
+                    font-size: 2rem;
+                }
+
+                .txt {
+                    flex-direction: column;
+                }
+            }
+
+            .row-2 {
+                gap: 2rem;
+
+                .item {
+                    .list-thumb {
+                        font-size: 1rem;
+
+                        .sticker {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    .list-content {
+                        padding: 1.5rem;
+
+                        .list-icon {
+                            column-gap: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
