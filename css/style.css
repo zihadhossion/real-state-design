@@ -683,5 +683,84 @@ li {
         padding: 1.5rem; }
         #featured-list .container .row-2 .item .list-content .list-icon {
           column-gap: 1.5rem; } }
+#footer {
+  color: #ffffff;
+  background: #181a20;
+  font-size: 1.5rem; }
+  #footer .container {
+    padding: 12rem 0; }
+    #footer .container .row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      column-gap: 2rem; }
+      #footer .container .row .col-1 {
+        grid-column: 1/2; }
+        #footer .container .row .col-1 .footer-logo {
+          margin-bottom: 3rem; }
+        #footer .container .row .col-1 .contact-list {
+          display: flex;
+          column-gap: 2rem;
+          margin-bottom: 3rem;
+          line-height: 2; }
+          #footer .container .row .col-1 .contact-list .title {
+            font-weight: 400;
+            color: #bebdbd;
+            font-size: 1.4rem; }
+          #footer .container .row .col-1 .contact-list .contact {
+            font-weight: 600;
+            transition: all .2s linear; }
+          #footer .container .row .col-1 .contact-list .contact:hover {
+            cursor: pointer;
+            color: #eb6753; }
+        #footer .container .row .col-1 .app-widget {
+          margin-bottom: 5rem; }
+          #footer .container .row .col-1 .app-widget .title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem; }
+          #footer .container .row .col-1 .app-widget .app-link {
+            display: flex;
+            align-items: center;
+            gap: 3rem; }
+            #footer .container .row .col-1 .app-widget .app-link .col {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              gap: 2rem;
+              color: #ffffff;
+              background: rgba(255, 255, 255, 0.04);
+              border-radius: 1rem;
+              padding: .75rem 1.5rem;
+              transition: all .25s linear; }
+              #footer .container .row .col-1 .app-widget .app-link .col .icon {
+                font-size: 3rem; }
+              #footer .container .row .col-1 .app-widget .app-link .col .sub-title {
+                font-size: 1.3rem;
+                color: #bebdbd; }
+            #footer .container .row .col-1 .app-widget .app-link .col:hover {
+              background: #ee4c34; }
+        #footer .container .row .col-1 .social-widget {
+          margin-bottom: 3rem; }
+          #footer .container .row .col-1 .social-widget .meta {
+            padding: 2.5rem 2rem;
+            display: flex;
+            align-items: center;
+            column-gap: 3rem; }
+            #footer .container .row .col-1 .social-widget .meta .social-link {
+              background: transparent;
+              border-radius: 50%;
+              padding: .7rem 1.3rem;
+              transition: all .2s linear;
+              position: relative; }
+            #footer .container .row .col-1 .social-widget .meta .social-link:hover {
+              cursor: pointer;
+              background: rgba(255, 255, 255, 0.05); }
+      #footer .container .row .col-2 {
+        grid-column: 2/-1; }
+        #footer .container .row .col-2 .footer-list {
+          display: flex;
+          align-items: flex-start;
+          gap: 3rem; }
 
 /*# sourceMappingURL=style.css.map */

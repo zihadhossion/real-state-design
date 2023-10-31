@@ -1,0 +1,123 @@
+#footer {
+    color: $primary-color;
+    background: $second-color;
+    font-size: 1.5rem;
+
+
+    .container {
+        padding: 12rem 0;
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            column-gap: 2rem;
+
+            .col-1 {
+                grid-column: 1/2;
+
+                .footer-logo {
+                    margin-bottom: 3rem;
+                }
+
+                .contact-list {
+                    display: flex;
+                    column-gap: 2rem;
+                    margin-bottom: 3rem;
+                    line-height: 2;
+
+                    .title {
+                        font-weight: 400;
+                        color: $color-3;
+                        font-size: 1.4rem;
+                    }
+
+                    .contact {
+                        font-weight: 600;
+                        transition: all .2s linear;
+                    }
+
+                    .contact:hover {
+                        cursor: pointer;
+                        color: $color-1;
+                    }
+                }
+
+                .app-widget {
+                    margin-bottom: 5rem;
+
+                    .title {
+                        font-size: 1.8rem;
+                        font-weight: 600;
+                        margin-bottom: 1rem;
+                    }
+
+                    .app-link {
+                        display: flex;
+                        align-items: center;
+                        gap: 3rem;
+
+                        .col {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            gap: 2rem;
+                            color: $primary-color;
+                            background: hsla(0, 0%, 100%, .04);
+                            border-radius: 1rem;
+                            padding: .75rem 1.5rem;
+                            transition: all .25s linear;
+
+                            .icon {
+                                font-size: 3rem;
+                            }
+
+                            .sub-title {
+                                font-size: 1.3rem;
+                                color: $color-3;
+                            }
+                        }
+
+                        .col:hover {
+                            background: $color-2;
+                        }
+                    }
+                }
+
+                .social-widget {
+                    margin-bottom: 3rem;
+
+                    .meta {
+                        padding: 2.5rem 2rem;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 3rem;
+
+                        .social-link {
+                            background: transparent;
+                            border-radius: 50%;
+                            padding: .7rem 1.3rem;
+                            transition: all .2s linear;
+                            position: relative;
+                        }
+
+                        .social-link:hover {
+                            cursor: pointer;
+                            background: hsla(0, 0%, 100%, .05);
+                        }
+                    }
+                }
+            }
+
+            .col-2 {
+                grid-column: 2/-1;
+
+                .footer-list {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 3rem;
+                }
+            }
+        }
+    }
+}
