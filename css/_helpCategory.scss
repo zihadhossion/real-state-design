@@ -1,4 +1,4 @@
-#category {
+#help-category {
     font-size: 1.5rem;
     text-align: center;
     padding: 12rem 0;
@@ -58,7 +58,7 @@
                         border: 1px solid $second-color;
                         outline: none;
                         border-radius: 1rem;
-                        padding: 1.7rem 2.75rem;
+                        padding: 1.6rem 3rem;
                         transition: all .3s linear;
                         cursor: pointer;
 
@@ -84,7 +84,7 @@
 }
 
 @media (max-width:992px) {
-    #category {
+    #help-category {
         .container {
             .row-2 {
                 grid-template-columns: repeat(2, 1fr);
@@ -94,7 +94,7 @@
 }
 
 @media (max-width:550px) {
-    #category {
+    #help-category {
         .container {
             .row-1 {
                 margin-bottom: 3rem;

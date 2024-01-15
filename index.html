@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
@@ -237,6 +237,7 @@
                         <div class="tab-content">
                             <div class="row">
                                 <div class="col-1">
+                                    <span class="home-icon"><i class="fa-solid fa-house-user"></i></span>
                                     <input type="text"
                                         placeholder="Enter an address, neighborhood, city, or ZIP code for Buy">
                                 </div>
@@ -264,11 +265,11 @@
                     </div>
                     <div class="swiperBtn">
                         <div>
-                            <button class="prev__active swiper_button swiper-button-disabled"><i
+                            <button class="prev__active swiper_button swiper-button-disabled swiper-button-prev"><i
                                     class="fa-solid fa-arrow-left-long"></i></button>
                         </div>
                         <div>
-                            <button class="next__active swiper_button"><i
+                            <button class="next__active swiper_button swiper-button-next"><i
                                     class="fa-solid fa-arrow-right-long"></i></button>
                         </div>
                         <div class="swiper-pagination-bullet-active"></div>
@@ -323,7 +324,7 @@
                 </div>
             </div>
         </section>
-        <section id="category">
+        <section id="help-category">
             <div class="container">
                 <div class="row-1">
                     <h1 class="title">See How Realton Can Help</h1>
@@ -367,7 +368,7 @@
                     <h1 class="title">Discover Our Featured Listings</h1>
                     <div class="txt">
                         <p>Aliquam lacinia diam quis lacus euismod</p>
-                        <a href="">See All Properties<span><i class="fa fa-arrow-right-long"></i></span></a>
+                        <a href="">See All Properties<i class="fa fa-arrow-right-long"></i></a>
                     </div>
                 </div>
                 <div class="row-2">
@@ -451,7 +452,7 @@
         </section>
         <footer id="footer">
             <div class="container">
-                <div class="row">
+                <div class="row-1">
                     <div class="col-1">
                         <div class="footer-logo">
                             <a href="#"><img src="./image/logo.svg" alt=""></a>
@@ -496,14 +497,14 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <p>Keep Yourself Up to Date</p>
-                        <div>
-                            <input type="email" placeholder="Your email">
-                            <button>Subscribe</button>
-                        </div>
+                        <p class="title">Keep Yourself Up to Date</p>
+                        <form class="form">
+                            <input type="email" placeholder="Your email" class="email">
+                            <button type="submit">Subscribe</button>
+                        </form>
                         <article class="footer-list">
-                            <div>
-                                <h3>Popular Search</h3>
+                            <div class="col-link">
+                                <h3 class="sub-title">Popular Search</h3>
                                 <ul>
                                     <li>Apartment for Rent</li>
                                     <li>Apartment Low to Hide</li>
@@ -511,8 +512,8 @@
                                     <li>Offices for Rent</li>
                                 </ul>
                             </div>
-                            <div>
-                                <h3>Quick Links</h3>
+                            <div class="col-link">
+                                <h3 class="sub-title">Quick Links</h3>
                                 <ul>
                                     <li>Terms of Use</li>
                                     <li>Privacy Policy</li>
@@ -523,8 +524,8 @@
                                     <li>FAQs</li>
                                 </ul>
                             </div>
-                            <div>
-                                <h3>Discover</h3>
+                            <div class="col-link">
+                                <h3 class="sub-title">Discover</h3>
                                 <ul>
                                     <li>Chicago</li>
                                     <li>New York</li>
@@ -535,7 +536,16 @@
                         </article>
                     </div>
                 </div>
-                <div class="row"></div>
+                <div class="row-2">
+                    <div class="left">
+                        &copy; Homez 2024 ZH - All rights reserved
+                    </div>
+                    <div class="right">
+                        <a href="#">Privacy</a>.
+                        <a href="#">Terms</a>.
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
             </div>
         </footer>
     </main>

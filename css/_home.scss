@@ -90,8 +90,19 @@
                         .col-1 {
                             flex: 0 0 auto;
                             width: 70%;
+                            display: flex;
+                            position: relative;
+
+                            .home-icon {
+                                color: black;
+                                align-self: center;
+                                position: absolute;
+                                left: 1%;
+                            }
 
                             input {
+                                // position: relative;
+                                font-size: 1.6rem;
                                 background: $bg-white;
                                 width: 100%;
                                 border: none;
@@ -177,7 +188,7 @@
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:550px) {
     #home .container .content {
         .title {
             font-size: 3rem;

@@ -49,12 +49,11 @@ for (const btn of btnActive) {
         btn.classList.add("btn-active");
     })
 }
+
 //Initialize Swiper
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
-    spaceBetween: 30,
     loop: true,
-    centeredSlides: true,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,

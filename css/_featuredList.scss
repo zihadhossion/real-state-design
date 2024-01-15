@@ -15,6 +15,22 @@
                 display: flex;
                 justify-content: space-between;
                 margin-top: 1rem;
+
+                a {
+                    font-size: 1.5rem;
+                    color: $second-color ;
+                    font-weight: 600;
+                    transition: $Transition;
+
+                    i {
+                        transform: rotate(-45deg);
+                        margin-left: 1.25rem;
+                    }
+
+                    &:hover {
+                        color: $color-1;
+                    }
+                }
             }
         }
 
