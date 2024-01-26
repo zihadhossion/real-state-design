@@ -1,3 +1,57 @@
+%common-styles {
+    margin-bottom: 7rem;
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .txt {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        a {
+            font-size: 1.5rem;
+            color: $second-color;
+            font-weight: 600;
+            transition: $Transition;
+
+            i {
+                transform: rotate(-45deg);
+                margin-left: 1.25rem;
+            }
+
+            &:hover {
+                color: $color-1;
+            }
+        }
+    }
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+}
+
+@keyframes downUp {
+    0% {
+        transform: translateY(25px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 #featured-list {
     font-size: 1.5rem;
     background: #F7F7F7;
@@ -5,33 +59,7 @@
 
     .container {
         .row-1 {
-            margin-bottom: 7rem;
-
-            .title {
-                font-size: 3rem;
-            }
-
-            .txt {
-                display: flex;
-                justify-content: space-between;
-                margin-top: 1rem;
-
-                a {
-                    font-size: 1.5rem;
-                    color: $second-color ;
-                    font-weight: 600;
-                    transition: $Transition;
-
-                    i {
-                        transform: rotate(-45deg);
-                        margin-left: 1.25rem;
-                    }
-
-                    &:hover {
-                        color: $color-1;
-                    }
-                }
-            }
+            @extend %common-styles;
         }
 
         .row-2 {
@@ -119,6 +147,10 @@
                     }
 
                     .list-meta {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
                         .sub-title {
                             font-size: 1.3rem;
                         }
@@ -129,12 +161,6 @@
                         margin: 1rem 0;
                         height: 1px;
                         background: #ddd;
-                    }
-
-                    .list-meta {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
                     }
                 }
 
@@ -150,18 +176,6 @@
                     }
                 }
             }
-        }
-    }
-
-    @keyframes upDown {
-        0% {
-            transform: translateY(0px);
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateY(25px);
-            opacity: 0;
         }
     }
 }
@@ -224,6 +238,67 @@
 
                         .list-icon {
                             column-gap: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#city-list {
+    padding: 12rem 15rem;
+
+    .container {
+        .row-1 {
+            @extend %common-styles;
+        }
+
+        .row-2 {
+            .cities {
+                .city {
+                    position: relative;
+                    width: 275px;
+                    transition: all .3s ease;
+
+                    &-image {
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &-content {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        transition: all .3s ease;
+
+                        .top-area {
+                            position: absolute;
+                            padding-left: 3rem;
+                            top: 30px;
+                        }
+
+                        .bottom-area {
+                            position: absolute;
+                            left: 30px;
+                            bottom: 30px;
+                            visibility: hidden;
+                        }
+                    }
+
+                    &:hover {
+                        .city-content {
+                            .bottom-area {
+                                visibility: visible;
+                                animation: downUp .25s ease both;
+                            }
                         }
                     }
                 }

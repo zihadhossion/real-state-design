@@ -8,6 +8,7 @@ html {
   font-size: 62.5%; }
 
 body {
+  font-size: 1.5rem;
   font-family: 'Poppins', sans-serif; }
 
 a {
@@ -617,28 +618,43 @@ button {
       font-size: 1.5rem; }
   #help-category .container .row-2 {
     grid-template-columns: 1fr; } }
+#featured-list .container .row-1, #city-list .container .row-1 {
+  margin-bottom: 7rem; }
+  #featured-list .container .row-1 .title, #city-list .container .row-1 .title {
+    font-size: 3rem; }
+  #featured-list .container .row-1 .txt, #city-list .container .row-1 .txt {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem; }
+    #featured-list .container .row-1 .txt a, #city-list .container .row-1 .txt a {
+      font-size: 1.5rem;
+      color: #181a20;
+      font-weight: 600;
+      transition: all 0.25s linear; }
+      #featured-list .container .row-1 .txt a i, #city-list .container .row-1 .txt a i {
+        transform: rotate(-45deg);
+        margin-left: 1.25rem; }
+      #featured-list .container .row-1 .txt a:hover, #city-list .container .row-1 .txt a:hover {
+        color: #eb6753; }
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0px);
+    opacity: 1; }
+  100% {
+    transform: translateY(25px);
+    opacity: 0; } }
+@keyframes downUp {
+  0% {
+    transform: translateY(25px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
 #featured-list {
   font-size: 1.5rem;
   background: #F7F7F7;
   padding: 12rem 15rem; }
-  #featured-list .container .row-1 {
-    margin-bottom: 7rem; }
-    #featured-list .container .row-1 .title {
-      font-size: 3rem; }
-    #featured-list .container .row-1 .txt {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 1rem; }
-      #featured-list .container .row-1 .txt a {
-        font-size: 1.5rem;
-        color: #181a20;
-        font-weight: 600;
-        transition: all 0.25s linear; }
-        #featured-list .container .row-1 .txt a i {
-          transform: rotate(-45deg);
-          margin-left: 1.25rem; }
-        #featured-list .container .row-1 .txt a:hover {
-          color: #eb6753; }
   #featured-list .container .row-2 {
     display: grid;
     align-items: center;
@@ -699,28 +715,22 @@ button {
             #featured-list .container .row-2 .item .list-content .list-icon li:hover {
               cursor: pointer;
               color: #eb6753; }
-        #featured-list .container .row-2 .item .list-content .list-meta .sub-title {
-          font-size: 1.3rem; }
+        #featured-list .container .row-2 .item .list-content .list-meta {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; }
+          #featured-list .container .row-2 .item .list-content .list-meta .sub-title {
+            font-size: 1.3rem; }
         #featured-list .container .row-2 .item .list-content .divider {
           width: 100%;
           margin: 1rem 0;
           height: 1px;
           background: #ddd; }
-        #featured-list .container .row-2 .item .list-content .list-meta {
-          display: flex;
-          align-items: center;
-          justify-content: space-between; }
       #featured-list .container .row-2 .item:hover .list-thumb .sticker {
         animation: upDown .25s linear both; }
       #featured-list .container .row-2 .item:hover .list-thumb .image {
         transform: scale(1.11) rotate(-1deg); }
-@keyframes upDown {
-  0% {
-    transform: translateY(0px);
-    opacity: 1; }
-  100% {
-    transform: translateY(25px);
-    opacity: 0; } }
+
 @media (max-width: 992px) {
   #featured-list {
     padding: 10rem; }
@@ -750,6 +760,38 @@ button {
         padding: 1.5rem; }
         #featured-list .container .row-2 .item .list-content .list-icon {
           column-gap: 1.5rem; } }
+#city-list {
+  padding: 12rem 15rem; }
+  #city-list .container .row-2 .cities .city {
+    position: relative;
+    width: 275px;
+    transition: all .3s ease; }
+    #city-list .container .row-2 .cities .city-image {
+      position: relative; }
+      #city-list .container .row-2 .cities .city-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
+    #city-list .container .row-2 .cities .city-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: all .3s ease; }
+      #city-list .container .row-2 .cities .city-content .top-area {
+        position: absolute;
+        padding-left: 3rem;
+        top: 30px; }
+      #city-list .container .row-2 .cities .city-content .bottom-area {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        visibility: hidden; }
+    #city-list .container .row-2 .cities .city:hover .city-content .bottom-area {
+      visibility: visible;
+      animation: downUp .25s ease both; }
+
 #footer {
   color: #ffffff;
   background: #181a20;
