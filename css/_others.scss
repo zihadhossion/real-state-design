@@ -1,0 +1,102 @@
+#sell-option {
+    .row {
+        display: flex;
+        justify-content: space-between;
+
+        .col-1 {
+            flex: 0 0 auto;
+            width: 33.333%;
+            margin-top: 10rem;
+            color: $second-color;
+            max-width: 320px;
+
+            .title {
+                font-size: 3rem;
+                font-weight: 600;
+                margin-bottom: 3rem;
+            }
+
+            .desc {
+                margin-bottom: 2.5rem;
+            }
+
+            .specification {
+                margin-bottom: 5rem;
+
+                li {
+                    display: flex;
+                    gap: 1rem;
+
+                    .checkIcon {
+                        width: 25px;
+                        height: 25px;
+                        color: $primary-color;
+                        background-color: $second-color;
+                        border-radius: 50%;
+                        text-align: center;
+
+                        i {
+                            font-size: .75rem;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .col-2 {
+            flex: 0 0 auto;
+            width: 58.333%;
+            position: relative;
+
+            .box {
+                display: inline-block;
+
+                img {
+                    border-radius: 12px;
+                }
+            }
+
+            .img-box2 {
+                margin-left: 3rem;
+            }
+
+            .img-box3 {
+                text-align: center;
+                position: absolute;
+                right: 0;
+                left: 0;
+                bottom: -35px;
+                margin: 0 auto;
+
+                img {
+                    box-shadow: 0 0 50px rgba(24, 26, 32, .07);
+                    transform: translateY(0);
+                    animation: bounceY 6s ease-in-out infinite;
+                }
+            }
+        }
+    }
+}
+
+@keyframes bounceY {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

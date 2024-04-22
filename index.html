@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Link fontawesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -160,10 +166,10 @@
                         <i class="fa-regular fa-user"></i>
                         <span>Login / Register</span>
                     </div>
-                    <div class="property-btn">
-                        <a class="btn">Add Property</a>
+                    <a class="property-btn">
+                        <span>Add Property</span>
                         <i class="fa fa-arrow-right-long"></i>
-                    </div>
+                    </a>
 
                     <div class="menu-bar">
                         <i class="fa-solid fa-bars"></i>
@@ -265,19 +271,29 @@
                     </div>
                     <div class="swiperBtn">
                         <div>
-                            <button class="prev__active swiper_button swiper-button-disabled swiper-button-prev"><i
-                                    class="fa-solid fa-arrow-left-long"></i></button>
+                            <button class="prev__active swiper_button  swiper-button-disabled" disabled>
+                                <i class="fa-solid fa-arrow-left-long"></i>
+                            </button>
                         </div>
                         <div>
-                            <button class="next__active swiper_button swiper-button-next"><i
-                                    class="fa-solid fa-arrow-right-long"></i></button>
+                            <div
+                                class="pagination explore-pagination swiper--pagination pagination__active swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                                <span class="swiper-pagination-bullet"></span>
+                                <span class="swiper-pagination-bullet"></span>
+                            </div>
                         </div>
-                        <div class="swiper-pagination-bullet-active"></div>
+
+                        <div>
+                            <button class="next__active swiper_button swiper-button-disabled" disabled>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="row-2">
                     <div class="col in-out">
-                        <div class="swiper mySwiper">
+                        <div class="swiper exploreProperty">
                             <div class="slider swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="item">
@@ -317,6 +333,60 @@
                                             </div>
                                         </a>
                                     </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div>
+                                                <span class="exIcon"><i class="fa-solid fa-house"></i></span>
+                                                <div class="text">
+                                                    <h6>Houses</h6>
+                                                    <p>22 properties</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div>
+                                                <span class="exIcon"><i class="fa-solid fa-house"></i></span>
+                                                <div class="text">
+                                                    <h6>Houses</h6>
+                                                    <p>22 properties</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div>
+                                                <span class="exIcon"><i class="fa-solid fa-house"></i></span>
+                                                <div class="text">
+                                                    <h6>Houses</h6>
+                                                    <p>22 properties</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <a href="#">
+                                            <div>
+                                                <span class="exIcon"><i class="fa-solid fa-house"></i></span>
+                                                <div class="text">
+                                                    <h6>Houses</h6>
+                                                    <p>22 properties</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
                                 </div>
                             </div>
                         </div>
@@ -358,11 +428,10 @@
                             <button class="btn">Find a home <span><i class="fa fa-arrow-right-long"></i></span></button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-        <section id="featured-list">
+        <section id="featured-list" style="display: none;">
             <div class="container">
                 <div class="row-1">
                     <h1 class="title">Discover Our Featured Listings</h1>
@@ -372,110 +441,379 @@
                     </div>
                 </div>
                 <div class="row-2">
-                    <div class="item">
-                        <div class="list-thumb">
-                            <img class="image" src="./image/g1.webp" alt="">
-                            <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
-                            <p class="price">$14,000 / mo</p>
+                    <div class="swiper featuredList">
+                        <div class="slider swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="list-thumb">
+                                        <img class="image" src="./image/g1.webp" alt="">
+                                        <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
+                                        <p class="price">$14,000 / mo</p>
+                                    </div>
+                                    <article class="list-content">
+                                        <a href="#" class="title">Equestrian Family Home</a>
+                                        <p class="desc">New York City, CA, USA</p>
+                                        <ul class="list-icon">
+                                            <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                            <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                            <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                        </ul>
+                                        <div class="divider"></div>
+                                        <div class="list-meta">
+                                            <div class="sub-title">For Rent</div>
+                                            <ul class="list-icon">
+                                                <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                                <li><i class="fa-solid fa-plus"></i></li>
+                                                <li><i class="fa-regular fa-heart"></i></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="list-thumb">
+                                        <img class="image" src="./image/g1.webp" alt="">
+                                        <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
+                                        <p class="price">$14,000 / mo</p>
+                                    </div>
+                                    <article class="list-content">
+                                        <a href="#" class="title">Equestrian Family Home</a>
+                                        <p class="desc">New York City, CA, USA</p>
+                                        <ul class="list-icon">
+                                            <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                            <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                            <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                        </ul>
+                                        <div class="divider"></div>
+                                        <div class="list-meta">
+                                            <div class="sub-title">For Rent</div>
+                                            <ul class="list-icon">
+                                                <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                                <li><i class="fa-solid fa-plus"></i></li>
+                                                <li><i class="fa-regular fa-heart"></i></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="list-thumb">
+                                        <img class="image" src="./image/g1.webp" alt="">
+                                        <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
+                                        <p class="price">$14,000 / mo</p>
+                                    </div>
+                                    <article class="list-content">
+                                        <a href="#" class="title">Equestrian Family Home</a>
+                                        <p class="desc">New York City, CA, USA</p>
+                                        <ul class="list-icon">
+                                            <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                            <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                            <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                        </ul>
+                                        <div class="divider"></div>
+                                        <div class="list-meta">
+                                            <div class="sub-title">For Rent</div>
+                                            <ul class="list-icon">
+                                                <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                                <li><i class="fa-solid fa-plus"></i></li>
+                                                <li><i class="fa-regular fa-heart"></i></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="list-thumb">
+                                        <img class="image" src="./image/g1.webp" alt="">
+                                        <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
+                                        <p class="price">$14,000 / mo</p>
+                                    </div>
+                                    <article class="list-content">
+                                        <a href="#" class="title">Equestrian Family Home</a>
+                                        <p class="desc">New York City, CA, USA</p>
+                                        <ul class="list-icon">
+                                            <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                            <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                            <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                        </ul>
+                                        <div class="divider"></div>
+                                        <div class="list-meta">
+                                            <div class="sub-title">For Rent</div>
+                                            <ul class="list-icon">
+                                                <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                                <li><i class="fa-solid fa-plus"></i></li>
+                                                <li><i class="fa-regular fa-heart"></i></li>
+                                            </ul>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                            <!-- <div class="swiper-slide">
+                            </div> -->
                         </div>
-                        <article class="list-content">
-                            <a href="#" class="title">Equestrian Family Home</a>
-                            <p class="desc">New York City, CA, USA</p>
-                            <ul class="list-icon">
-                                <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
-                                <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
-                                <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
-                            </ul>
-                            <div class="divider"></div>
-                            <div class="list-meta">
-                                <div class="sub-title">For Rent</div>
-                                <ul class="list-icon">
-                                    <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
-                                    <li><i class="fa-solid fa-plus"></i></li>
-                                    <li><i class="fa-regular fa-heart"></i></li>
-                                </ul>
+                    </div>
+                    <div class="col">
+                        <div class="swiperBtn">
+                            <div>
+                                <button class="prev_active swiper_button  swiper-button-disabled" disabled>
+                                    <i class="fa-solid fa-arrow-left-long"></i>
+                                </button>
+                            </div>
+                            <div>
+                                <div
+                                    class="pagination featuredList-pagination swiper--pagination pagination__active swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                                    <span class="swiper-pagination-bullet"></span>
+                                    <span class="swiper-pagination-bullet"></span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="next_active swiper_button swiper-button-disabled" disabled>
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="city-list" style="display: none;">
+            <div class="container">
+                <div class="row-1">
+                    <h1 class="title">Properties by Cities</h1>
+                    <div class="txt">
+                        <p>Aliquam lacinia diam quis lacus euismod</p>
+                        <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="swiper cityList">
+                        <div class="slider swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="city">
+                                    <div class="city-image">
+                                        <img src="./image/city-list.png" alt="">
+                                    </div>
+                                    <div class="city-content">
+                                        <div class="top-area">
+                                            <h3>Chicago</h3>
+                                            <p>12 properties</p>
+                                        </div>
+                                        <div class="bottom-area">
+                                            <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="city">
+                                    <div class="city-image">
+                                        <img src="./image/city-list.png" alt="">
+                                    </div>
+                                    <div class="city-content">
+                                        <div class="top-area">
+                                            <h3>Chicago</h3>
+                                            <p>12 properties</p>
+                                        </div>
+                                        <div class="bottom-area">
+                                            <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="city">
+                                    <div class="city-image">
+                                        <img src="./image/city-list.png" alt="">
+                                    </div>
+                                    <div class="city-content">
+                                        <div class="top-area">
+                                            <h3>Chicago</h3>
+                                            <p>12 properties</p>
+                                        </div>
+                                        <div class="bottom-area">
+                                            <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="city">
+                                    <div class="city-image">
+                                        <img src="./image/city-list.png" alt="">
+                                    </div>
+                                    <div class="city-content">
+                                        <div class="top-area">
+                                            <h3>Chicago</h3>
+                                            <p>12 properties</p>
+                                        </div>
+                                        <div class="bottom-area">
+                                            <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="city">
+                                    <div class="city-image">
+                                        <img src="./image/city-list.png" alt="">
+                                    </div>
+                                    <div class="city-content">
+                                        <div class="top-area">
+                                            <h3>Chicago</h3>
+                                            <p>12 properties</p>
+                                        </div>
+                                        <div class="bottom-area">
+                                            <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="city">
+                                    <div class="city-image">
+                                        <img src="./image/city-list.png" alt="">
+                                    </div>
+                                    <div class="city-content">
+                                        <div class="top-area">
+                                            <h3>Chicago</h3>
+                                            <p>12 properties</p>
+                                        </div>
+                                        <div class="bottom-area">
+                                            <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sell-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                        <h1 class="title">Let's find the right selling option for you</h1>
+                        <p class="desc">As the complexity of buildings to increase, the field of architecture</p>
+                        <ul class="specification">
+                            <li>
+                                <div class="checkIcon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span>Find excellent deals</span>
+                            </li>
+                            <li>
+                                <div class="checkIcon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span>Friendly host & Fast support</span>
+                            </li>
+                            <li>
+                                <div class="checkIcon">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <span>List your own property</span>
+                            </li>
+                        </ul>
+                        <button class="btn">Learn More <span><i class="fa fa-arrow-right-long"></i></span></button>
+                    </div>
+                    <div class="col-2">
+                        <div class="box img-box1">
+                            <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Fabout%2Fabout-1.jpg&w=384&q=75"
+                                alt="">
+                        </div>
+                        <div class="box img-box2">
+                            <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Fabout%2Fabout-2.jpg&w=384&q=75"
+                                alt="">
+                        </div>
+                        <div class="box img-box3">
+                            <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Fabout%2Fabout-1.png&w=384&q=75"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="blogs">
+            <div class="container">
+                <div class="row-1">
+                    <h1>Form our blog</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="row-2">
+                    <div class="box">
+                        <article class="blog">
+                            <div class="blog-image">
+                                <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Fblog%2Fblog-1.jpg&w=640&q=75"
+                                    alt="">
+                            </div>
+                            <div class="blog-content">
+                                <div class="date">
+                                    <p>July</p>
+                                    <p class="day">28</p>
+                                </div>
+                                <p class="genre">Living room</p>
+                                <a class="desc">Private Contemporary Home Balancing Openness</a>
                             </div>
                         </article>
                     </div>
-                    <div class="item">
-                        <div class="list-thumb">
-                            <img class="image" src="./image/g1.webp" alt="">
-                            <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
-                            <p class="price">$14,000 / mo</p>
-                        </div>
-                        <article class="list-content">
-                            <a href="#" class="title">Equestrian Family Home</a>
-                            <p class="desc">New York City, CA, USA</p>
-                            <ul class="list-icon">
-                                <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
-                                <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
-                                <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
-                            </ul>
-                            <div class="divider"></div>
-                            <div class="list-meta">
-                                <div class="sub-title">For Rent</div>
-                                <ul class="list-icon">
-                                    <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
-                                    <li><i class="fa-solid fa-plus"></i></li>
-                                    <li><i class="fa-regular fa-heart"></i></li>
-                                </ul>
+                    <div class="box">
+                        <article class="blog">
+                            <div class="blog-image">
+                                <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Fblog%2Fblog-1.jpg&w=640&q=75"
+                                    alt="">
+                            </div>
+                            <div class="blog-content">
+                                <div class="date">
+                                    <p>July</p>
+                                    <p class="day">28</p>
+                                </div>
+                                <p class="genre">Living room</p>
+                                <a class="desc">Private Contemporary Home Balancing Openness</a>
                             </div>
                         </article>
                     </div>
-                    <div class="item">
-                        <div class="list-thumb">
-                            <img class="image" src="./image/g1.webp" alt="">
-                            <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
-                            <p class="price">$14,000 / mo</p>
-                        </div>
-                        <article class="list-content">
-                            <a href="#" class="title">Equestrian Family Home</a>
-                            <p class="desc">New York City, CA, USA</p>
-                            <ul class="list-icon">
-                                <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
-                                <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
-                                <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
-                            </ul>
-                            <div class="divider"></div>
-                            <div class="list-meta">
-                                <div class="sub-title">For Rent</div>
-                                <ul class="list-icon">
-                                    <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
-                                    <li><i class="fa-solid fa-plus"></i></li>
-                                    <li><i class="fa-regular fa-heart"></i></li>
-                                </ul>
+                    <div class="box">
+                        <article class="blog">
+                            <div class="blog-image">
+                                <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Fblog%2Fblog-1.jpg&w=640&q=75"
+                                    alt="">
+                            </div>
+                            <div class="blog-content">
+                                <div class="date">
+                                    <p>July</p>
+                                    <p class="day">28</p>
+                                </div>
+                                <p class="genre">Living room</p>
+                                <a class="desc">Private Contemporary Home Balancing Openness</a>
                             </div>
                         </article>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="city-list">
+        <section id="contacts">
             <div class="container">
-                <div class="row-1">
-                    <h1 class="title">Properties by Cities</h1>
-                    <div class="txt">
-                        <p>Aliquam lacinia diam quis lacus euismod</p>
-                        <a href="">See All Properties<i class="fa fa-arrow-right-long"></i></a>
-                    </div>
+                <div class="left">
+                    <h1>Need help? Talk to our expert.</h1>
+                    <p>Talk to our experts or Browse through more properties.</p>
                 </div>
-                <div class="row-2">
-                    <div class="cities">
-                        <div class="city">
-                            <div class="city-image">
-                                <img src="./image/city-list.png" alt="">
-                            </div>
-                            <div class="city-content">
-                                <div class="top-area">
-                                    <h3>Chicago</h3>
-                                    <p>12 properties</p>
-                                </div>
-                                <div class="bottom-area">
-                                    <a href="">See All Properties<i class="fa fa-arrow-right-long"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="right">
+                    <button>Contact Us</button>
+                    <button>92000515</button>
                 </div>
             </div>
         </section>

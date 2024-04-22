@@ -1,0 +1,29 @@
+#contacts {
+    padding: 1rem;
+    background-color: #F7F7F7;
+    height: 300px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 10rem;
+
+    // display: flex;
+    // align-items: center;
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    button {
+        font-size: 1.75rem;
+        padding: 1.5rem 2.5rem;
+        background-color: #fff;
+        transition: all .25s linear;
+
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}

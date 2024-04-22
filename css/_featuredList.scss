@@ -1,33 +1,3 @@
-%common-styles {
-    margin-bottom: 7rem;
-
-    .title {
-        font-size: 3rem;
-    }
-
-    .txt {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1rem;
-
-        a {
-            font-size: 1.5rem;
-            color: $second-color;
-            font-weight: 600;
-            transition: $Transition;
-
-            i {
-                transform: rotate(-45deg);
-                margin-left: 1.25rem;
-            }
-
-            &:hover {
-                color: $color-1;
-            }
-        }
-    }
-}
-
 @keyframes upDown {
     0% {
         transform: translateY(0px);
@@ -40,18 +10,6 @@
     }
 }
 
-@keyframes downUp {
-    0% {
-        transform: translateY(25px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
 #featured-list {
     font-size: 1.5rem;
     background: #F7F7F7;
@@ -59,121 +17,130 @@
 
     .container {
         .row-1 {
-            @extend %common-styles;
+            @extend %containerTitleStyles;
         }
 
         .row-2 {
-            display: grid;
-            align-items: center;
-            justify-content: center;
-            column-gap: 3rem;
-            grid-template-columns: repeat(3, 1fr);
+            .slider {
+                display: flex;
 
-            .item {
-                // width: 380px;
-                position: relative;
-                background: #fff;
-                overflow: hidden;
-                border-radius: 1rem;
-
-                .list-thumb {
+                .item {
                     position: relative;
+                    background: #fff;
                     overflow: hidden;
+                    border-radius: 1rem;
 
-                    .sticker {
-                        color: $primary-color;
-                        background: $color-1;
-                        font-size: 1.25rem;
-                        text-transform: uppercase;
-                        padding: .5rem 1rem;
-                        border-radius: .6rem;
-                        position: absolute;
-                        left: 20px;
-                        top: 20px;
-                    }
-
-                    .image {
-                        position: relative;
-                        width: 100%;
-                        transition: all .25s linear;
-                    }
-
-                    .price {
-                        background: $primary-color;
-                        padding: .5rem .75rem;
-                        border-radius: .6rem;
-                        position: absolute;
-                        left: 20px;
-                        bottom: 20px;
-                    }
-                }
-
-                .list-content {
-                    padding: 2rem;
-                    color: #717171;
-
-                    .title {
-                        color: $second-color;
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        line-height: 2.5rem;
-                    }
-
-                    .desc {
-                        font-size: 1.4rem;
-                        font-weight: 400;
-                        line-height: 2.75rem;
-                        margin-bottom: 1.5rem;
-                    }
-
-                    .list-icon {
-                        display: flex;
-                        align-items: center;
-                        column-gap: 3rem;
-
-                        li {
-                            font-size: 1.3rem;
-                            transition: all .2s linear;
-
-                            span {
-                                margin-left: 1rem;
-                            }
-
-                            &:hover {
-                                cursor: pointer;
-                                color: $color-1;
-                            }
-                        }
-                    }
-
-                    .list-meta {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        .sub-title {
-                            font-size: 1.3rem;
-                        }
-                    }
-
-                    .divider {
-                        width: 100%;
-                        margin: 1rem 0;
-                        height: 1px;
-                        background: #ddd;
-                    }
-                }
-
-                &:hover {
                     .list-thumb {
-                        .sticker {
-                            animation: upDown .25s linear both;
-                        }
+                        position: relative;
+                        overflow: hidden;
 
                         .image {
-                            transform: scale(1.11) rotate(-1deg);
+                            // position: relative;
+                            width: 100%;
+                            transition: all .25s linear;
+                        }
+
+                        .sticker {
+                            color: $primary-color;
+                            background: $color-1;
+                            font-size: 1.25rem;
+                            text-transform: uppercase;
+                            padding: .5rem 1rem;
+                            border-radius: .6rem;
+                            position: absolute;
+                            left: 20px;
+                            top: 20px;
+                        }
+
+                        .price {
+                            background: $primary-color;
+                            padding: .5rem .75rem;
+                            border-radius: .6rem;
+                            position: absolute;
+                            left: 20px;
+                            bottom: 20px;
                         }
                     }
+
+                    .list-content {
+                        padding: 2rem;
+                        color: #717171;
+
+                        .title {
+                            color: $second-color;
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                            line-height: 2.5rem;
+                        }
+
+                        .desc {
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            line-height: 2.75rem;
+                            margin-bottom: 1.5rem;
+                        }
+
+                        .list-icon {
+                            display: flex;
+                            align-items: center;
+                            column-gap: 3rem;
+
+                            li {
+                                font-size: 1.3rem;
+                                transition: all .2s linear;
+
+                                span {
+                                    margin-left: 1rem;
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+                                    color: $color-1;
+                                }
+                            }
+                        }
+
+                        .list-meta {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .sub-title {
+                                font-size: 1.3rem;
+                            }
+                        }
+
+                        .divider {
+                            width: 100%;
+                            margin: 1rem 0;
+                            height: 1px;
+                            background: #ddd;
+                        }
+                    }
+
+                    &:hover {
+                        .list-thumb {
+                            .sticker {
+                                animation: upDown .25s linear both;
+                            }
+
+                            .image {
+                                transform: scale(1.11) rotate(-1deg);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col {
+                display: flex;
+                justify-content: center;
+                margin-top: 5rem;
+
+                .swiperBtn {
+                    display: flex;
+                    align-items: center;
+                    gap: 2rem;
                 }
             }
         }
@@ -184,11 +151,11 @@
     #featured-list {
         padding: 10rem;
 
-        .container {
-            .row-2 {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+        // .container {
+        //     .row-2 {
+        //         grid-template-columns: repeat(2, 1fr);
+        //     }
+        // }
     }
 }
 
@@ -196,11 +163,11 @@
     #featured-list {
         padding: 7rem;
 
-        .container {
-            .row-2 {
-                grid-template-columns: 1fr;
-            }
-        }
+        // .container {
+        //     .row-2 {
+        //         grid-template-columns: 1fr;
+        //     }
+        // }
     }
 }
 
@@ -222,82 +189,23 @@
             }
 
             .row-2 {
-                gap: 2rem;
+                // gap: 2rem;
 
-                .item {
-                    .list-thumb {
-                        font-size: 1rem;
-
-                        .sticker {
+                .slider {
+                    .item {
+                        .list-thumb {
                             font-size: 1rem;
-                        }
-                    }
 
-                    .list-content {
-                        padding: 1.5rem;
-
-                        .list-icon {
-                            column-gap: 1.5rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-#city-list {
-    padding: 12rem 15rem;
-
-    .container {
-        .row-1 {
-            @extend %common-styles;
-        }
-
-        .row-2 {
-            .cities {
-                .city {
-                    position: relative;
-                    width: 275px;
-                    transition: all .3s ease;
-
-                    &-image {
-                        position: relative;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-
-                    &-content {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        transition: all .3s ease;
-
-                        .top-area {
-                            position: absolute;
-                            padding-left: 3rem;
-                            top: 30px;
+                            .sticker {
+                                font-size: 1rem;
+                            }
                         }
 
-                        .bottom-area {
-                            position: absolute;
-                            left: 30px;
-                            bottom: 30px;
-                            visibility: hidden;
-                        }
-                    }
+                        .list-content {
+                            padding: 1.5rem;
 
-                    &:hover {
-                        .city-content {
-                            .bottom-area {
-                                visibility: visible;
-                                animation: downUp .25s ease both;
+                            .list-icon {
+                                column-gap: 1.5rem;
                             }
                         }
                     }

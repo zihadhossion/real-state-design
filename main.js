@@ -1,15 +1,12 @@
 //sticky bar for window scroll
 window.addEventListener("scroll", () => {
     const stickyDesk = document.querySelector(".desktop-bar");
-    const stickyMob = document.querySelector(".mobile-bar");
+    // const stickyMob = document.querySelector(".mobile-bar");
 
     if (window.scrollY > 0) {
         stickyDesk.classList.add("sticky");
-        stickyMob.classList.add("sticky");
-
     } else {
         stickyDesk.classList.remove("sticky");
-        stickyMob.classList.remove("sticky");
     }
 })
 
@@ -51,9 +48,52 @@ for (const btn of btnActive) {
 }
 
 //Initialize Swiper
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    loop: true,
+let swiper1 = new Swiper(".exploreProperty", {
+    slidesPerView: 6,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".next__active",
+        prevEl: ".prev__active",
+    },
+    pagination: {
+        el: ".explore-pagination",
+        clickable: true,
+    },
+});
+let swiper2 = new Swiper(".featuredList", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".next_active",
+        prevEl: ".prev_active",
+    },
+    pagination: {
+        el: ".featuredList-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // when window width is >= 1200px
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
+    }
+});
+let swiper3 = new Swiper(".cityList", {
+    slidesPerView: 1,
+    spaceBetween: 0,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -62,6 +102,24 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // when window width is >= 1200px
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        }
+    }
+});
+
+var swiper = new Swiper(".mySwiper2", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    freeMode: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
