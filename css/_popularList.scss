@@ -1,17 +1,4 @@
-@keyframes upDown {
-    0% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(25px);
-        opacity: 0;
-    }
-}
-
-#featured-list {
-    background: $bg-white;
+#popular-list {
     @extend %sectionStyle;
 
     .container {
@@ -20,8 +7,12 @@
         }
 
         .row-2 {
-            .slider {
-                display: flex;
+            .listContainer {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                align-items: center;
+                gap: 2rem;
+                margin-bottom: 3rem;
 
                 .item {
                     position: relative;
@@ -131,83 +122,33 @@
                 }
             }
 
-            .col {
+            .btnBox {
                 display: flex;
+                align-items: center;
                 justify-content: center;
-                margin-top: 5rem;
-
-                .swiperBtn {
-                    display: flex;
-                    align-items: center;
-                    gap: 2rem;
-                }
             }
         }
     }
 }
 
 @media (max-width:992px) {
-    #featured-list {
-        padding: 10rem;
-
-        // .container {
-        //     .row-2 {
-        //         grid-template-columns: repeat(2, 1fr);
-        //     }
-        // }
-    }
-}
-
-@media (max-width:768px) {
-    #featured-list {
-        padding: 7rem;
-
-        // .container {
-        //     .row-2 {
-        //         grid-template-columns: 1fr;
-        //     }
-        // }
+    #popular-list {
+        .container {
+            .row-2 {
+                .listContainer {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
     }
 }
 
 @media (max-width:550px) {
-    #featured-list {
-        padding: 2rem 1rem;
-
+    #popular-list {
         .container {
-            .row-1 {
-                margin-bottom: 3rem;
-
-                .title {
-                    font-size: 2rem;
-                }
-
-                .txt {
-                    flex-direction: column;
-                }
-            }
-
             .row-2 {
-                // gap: 2rem;
-
-                .slider {
-                    .item {
-                        .list-thumb {
-                            font-size: 1rem;
-
-                            .sticker {
-                                font-size: 1rem;
-                            }
-                        }
-
-                        .list-content {
-                            padding: 1.5rem;
-
-                            .list-icon {
-                                column-gap: 1.5rem;
-                            }
-                        }
-                    }
+                .listContainer {
+                    grid-template-columns: repeat(1, 1fr);
                 }
             }
         }

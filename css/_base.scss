@@ -36,14 +36,28 @@ button {
     outline: none;
 }
 
+//global animation
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .container {
     margin: 0 auto;
-
+    padding: 1rem;
 }
 
 @media(min-width: 576px) {
     .container {
         max-width: 540px;
+        padding: unset;
     }
 }
 
@@ -62,6 +76,8 @@ button {
 @media(min-width: 1200px) {
     .container {
         max-width: 1140px;
+        padding-left: 5rem;
+        padding-right: 5rem;
     }
 }
 
@@ -71,46 +87,17 @@ button {
     }
 }
 
-%containerTitleStyles {
-    margin-bottom: 7rem;
-
-    .title {
-        font-size: 3rem;
-    }
-
-    .txt {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1rem;
-
-        a {
-            font-size: 1.5rem;
-            color: $second-color;
-            font-weight: 600;
-            transition: $Transition;
-
-            i {
-                transform: rotate(-45deg);
-                margin-left: 1.25rem;
-            }
-
-            &:hover {
-                color: $color-1;
-            }
-        }
-    }
-}
-
+//regular button style
 
 .btn {
+    display: inline-block;
     font-size: 1.5rem;
     font-weight: 600;
     background: transparent;
     border: 1px solid $second-color;
-    outline: none;
     border-radius: 1rem;
     padding: 1.6rem 3rem;
-    transition: all .3s linear;
+    transition: $Transition;
     cursor: pointer;
 
     &:hover {
@@ -122,5 +109,57 @@ button {
         font-size: 1.5rem;
         margin-left: 1rem;
         transform: rotate(-45deg);
+    }
+}
+
+//section common style
+%sectionStyle {
+    padding: 12rem 0;
+    position: relative;
+}
+
+//common style for container 
+%containerTitleStyles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+    margin-top: 1rem;
+
+    .txt {
+        color: $second-color;
+
+        .title {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+
+        .desc {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+
+    a {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $second-color;
+        transition: $Transition;
+
+        i {
+            transform: rotate(-45deg);
+            margin-left: 1.25rem;
+        }
+
+        &:hover {
+            color: $color-1;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    %containerTitleStyles {
+        flex-direction: column;
+        gap: 2rem;
     }
 }

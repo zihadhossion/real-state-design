@@ -20,7 +20,7 @@
 
 <body>
     <main class="wrapper">
-        <header id="header" class="">
+        <header id="header">
             <div class="desktop-bar">
                 <div class="left">
                     <div class="logo-box">
@@ -162,27 +162,23 @@
                     </ul>
                 </div>
                 <div class="right">
-                    <div class="account">
+                    <a href="#" class="account">
                         <i class="fa-regular fa-user"></i>
                         <span>Login / Register</span>
-                    </div>
-                    <a class="property-btn">
+                    </a>
+                    <a href="#" class="property-btn">
                         <span>Add Property</span>
                         <i class="fa fa-arrow-right-long"></i>
                     </a>
-
-                    <div class="menu-bar">
-                        <i class="fa-solid fa-bars"></i>
-                    </div>
                 </div>
             </div>
             <div class="mobile-bar">
                 <div class="menu-bar">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="logo-box">
+                <a class="logo-box">
                     <img src="./image/logo2.svg" alt="">
-                </div>
+                </a>
                 <div class="account">
                     <i class="fa-regular fa-user"></i>
                 </div>
@@ -228,7 +224,7 @@
                 </div>
             </div>
         </header>
-        <section id="home">
+        <section id="hero">
             <div class="container">
                 <article class="content">
                     <h4 class="sub-title">THE BEST WAY TO</h4>
@@ -271,7 +267,7 @@
                     </div>
                     <div class="swiperBtn">
                         <div>
-                            <button class="prev__active swiper_button  swiper-button-disabled" disabled>
+                            <button class="explore_prev__active swiper_button  swiper-button-disabled" disabled>
                                 <i class="fa-solid fa-arrow-left-long"></i>
                             </button>
                         </div>
@@ -283,9 +279,8 @@
                                 <span class="swiper-pagination-bullet"></span>
                             </div>
                         </div>
-
                         <div>
-                            <button class="next__active swiper_button swiper-button-disabled" disabled>
+                            <button class="explore_next__active swiper_button swiper-button-disabled" disabled>
                                 <i class="fa-solid fa-arrow-right-long"></i>
                             </button>
                         </div>
@@ -294,7 +289,7 @@
                 <div class="row-2">
                     <div class="col in-out">
                         <div class="swiper exploreProperty">
-                            <div class="slider swiper-wrapper">
+                            <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="item">
                                         <a href="#">
@@ -394,7 +389,7 @@
                 </div>
             </div>
         </section>
-        <section id="help-category">
+        <section id="help-category" style="padding-top: 0;">
             <div class="container">
                 <div class="row-1">
                     <h1 class="title">See How Realton Can Help</h1>
@@ -431,13 +426,15 @@
                 </div>
             </div>
         </section>
-        <section id="featured-list" style="display: none;">
+        <section id="featured-list">
             <div class="container">
                 <div class="row-1">
-                    <h1 class="title">Discover Our Featured Listings</h1>
                     <div class="txt">
-                        <p>Aliquam lacinia diam quis lacus euismod</p>
-                        <a href="">See All Properties<i class="fa fa-arrow-right-long"></i></a>
+                        <h1 class="title">Discover Our Featured Listings</h1>
+                        <p class="desc">Aliquam lacinia diam quis lacus euismod</p>
+                    </div>
+                    <div>
+                        <a href="#">See All Properties<i class="fa fa-arrow-right-long"></i></a>
                     </div>
                 </div>
                 <div class="row-2">
@@ -581,18 +578,20 @@
                 </div>
             </div>
         </section>
-        <section id="city-list" style="display: none;">
+        <section id="city-list">
             <div class="container">
                 <div class="row-1">
-                    <h1 class="title">Properties by Cities</h1>
                     <div class="txt">
-                        <p>Aliquam lacinia diam quis lacus euismod</p>
-                        <a href="">See All Cities<i class="fa fa-arrow-right-long"></i></a>
+                        <h1 class="title">Properties by Cities</h1>
+                        <p class="desc">Aliquam lacinia diam quis lacus euismod</p>
+                    </div>
+                    <div>
+                        <a href="#">See All Cities<i class="fa fa-arrow-right-long"></i></a>
                     </div>
                 </div>
                 <div class="row-2">
                     <div class="swiper cityList">
-                        <div class="slider swiper-wrapper">
+                        <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="city">
                                     <div class="city-image">
@@ -728,7 +727,10 @@
                                 <span>List your own property</span>
                             </li>
                         </ul>
-                        <button class="btn">Learn More <span><i class="fa fa-arrow-right-long"></i></span></button>
+                        <div class="btnBox">
+                            <button class="btn">Learn More <span><i class="fa fa-arrow-right-long"></i></span></button>
+                        </div>
+
                     </div>
                     <div class="col-2">
                         <div class="box img-box1">
@@ -742,6 +744,289 @@
                         <div class="box img-box3">
                             <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Fabout%2Fabout-1.png&w=384&q=75"
                                 alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="popular-list">
+            <div class="container">
+                <div class="row-1">
+                    <div class="left">
+                        <h1>Discover Popular Properties</h1>
+                        <p>Aliquam lacinia diam quis lacus euismod</p>
+                    </div>
+                    <div class="right">
+                        <button>for rent</button>
+                        <button>for sale</button>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="listContainer">
+                        <article class="item">
+                            <div class="list-thumb">
+                                <img class="image" src="./image/g1.webp" alt="">
+                                <p class="price">$14,000 / mo</p>
+                            </div>
+                            <article class="list-content">
+                                <a href="#" class="title">Equestrian Family Home</a>
+                                <p class="desc">New York City, CA, USA</p>
+                                <ul class="list-icon">
+                                    <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                    <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                    <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                </ul>
+                                <div class="divider"></div>
+                                <div class="list-meta">
+                                    <div class="sub-title">For Rent</div>
+                                    <ul class="list-icon">
+                                        <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                        <li><i class="fa-solid fa-plus"></i></li>
+                                        <li><i class="fa-regular fa-heart"></i></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </article>
+                        <article class="item">
+                            <div class="list-thumb">
+                                <img class="image" src="./image/g1.webp" alt="">
+                                <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
+                                <p class="price">$14,000 / mo</p>
+                            </div>
+                            <article class="list-content">
+                                <a href="#" class="title">Equestrian Family Home</a>
+                                <p class="desc">New York City, CA, USA</p>
+                                <ul class="list-icon">
+                                    <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                    <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                    <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                </ul>
+                                <div class="divider"></div>
+                                <div class="list-meta">
+                                    <div class="sub-title">For Rent</div>
+                                    <ul class="list-icon">
+                                        <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                        <li><i class="fa-solid fa-plus"></i></li>
+                                        <li><i class="fa-regular fa-heart"></i></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </article>
+                        <article class="item">
+                            <div class="list-thumb">
+                                <img class="image" src="./image/g1.webp" alt="">
+                                <p class="price">$14,000 / mo</p>
+                            </div>
+                            <article class="list-content">
+                                <a href="#" class="title">Equestrian Family Home</a>
+                                <p class="desc">New York City, CA, USA</p>
+                                <ul class="list-icon">
+                                    <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                    <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                    <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                </ul>
+                                <div class="divider"></div>
+                                <div class="list-meta">
+                                    <div class="sub-title">For Rent</div>
+                                    <ul class="list-icon">
+                                        <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                        <li><i class="fa-solid fa-plus"></i></li>
+                                        <li><i class="fa-regular fa-heart"></i></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </article>
+                        <article class="item">
+                            <div class="list-thumb">
+                                <img class="image" src="./image/g1.webp" alt="">
+                                <p class="sticker"><span><i class="fa-solid fa-bolt"></i></span> Featured</p>
+                                <p class="price">$14,000 / mo</p>
+                            </div>
+                            <article class="list-content">
+                                <a href="#" class="title">Equestrian Family Home</a>
+                                <p class="desc">New York City, CA, USA</p>
+                                <ul class="list-icon">
+                                    <li><i class="fa-solid fa-bed"></i><span>1 Bed</span></li>
+                                    <li><i class="fa-solid fa-shower"></i><span>2 Bath</span></li>
+                                    <li><i class="fa-solid fa-expand"></i><span>1200 Sqrt</span></li>
+                                </ul>
+                                <div class="divider"></div>
+                                <div class="list-meta">
+                                    <div class="sub-title">For Rent</div>
+                                    <ul class="list-icon">
+                                        <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                                        <li><i class="fa-solid fa-plus"></i></li>
+                                        <li><i class="fa-regular fa-heart"></i></li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </article>
+                    </div>
+                    <div class="btnBox">
+                        <a class="btn">
+                            <span>See All Properties</span>
+                            <i class="fa fa-arrow-right-long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="testimonial">
+            <div class="container">
+                <div class="row-1">
+                    <div class="text">
+                        <h1>People Love Living with Realton</h1>
+                        <p>Aliquam lacinia diam quis lacus euismod</p>
+                    </div>
+                    <div class="swiperBtn">
+                        <div>
+                            <button class="prev__active swiper_button  swiper-button-disabled" disabled>
+                                <i class="fa-solid fa-arrow-left-long"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <div
+                                class="pagination testimonial-pagination swiper--pagination pagination__active swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                                <span class="swiper-pagination-bullet"></span>
+                                <span class="swiper-pagination-bullet"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="next__active swiper_button swiper-button-disabled" disabled>
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="swiper testimonial">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="top">
+                                        <h4 class="title">Great Work</h4>
+                                        <span><i class="fa-solid fa-quote-left"></i></span>
+                                    </div>
+                                    <p class="desc">Amazing design, easy to customize and a design quality superlative
+                                        account on
+                                        its cloud platform for the optimized performance. And we didn’t on our
+                                        original designs.</p>
+                                    <div class="thumb">
+                                        <div class="profile">
+                                            <div>
+                                                <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Ftestimonials%2Ftestimonial-2.png&w=64&q=75"
+                                                    alt="">
+                                            </div>
+                                            <div>
+                                                <h3>Floyd Miles</h3>
+                                                <p>Bank of America</p>
+                                            </div>
+                                        </div>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="top">
+                                        <h4 class="title">Great Work</h4>
+                                        <span><i class="fa-solid fa-quote-left"></i></span>
+                                    </div>
+                                    <p class="desc">Amazing design, easy to customize and a design quality superlative
+                                        account on
+                                        its cloud platform for the optimized performance. And we didn’t on our
+                                        original designs.</p>
+                                    <div class="thumb">
+                                        <div class="profile">
+                                            <div>
+                                                <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Ftestimonials%2Ftestimonial-2.png&w=64&q=75"
+                                                    alt="">
+                                            </div>
+                                            <div>
+                                                <h3>Floyd Miles</h3>
+                                                <p>Bank of America</p>
+                                            </div>
+                                        </div>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="top">
+                                        <h4 class="title">Great Work</h4>
+                                        <span><i class="fa-solid fa-quote-left"></i></span>
+                                    </div>
+                                    <p class="desc">Amazing design, easy to customize and a design quality superlative
+                                        account on
+                                        its cloud platform for the optimized performance. And we didn’t on our
+                                        original designs.</p>
+                                    <div class="thumb">
+                                        <div class="profile">
+                                            <div>
+                                                <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Ftestimonials%2Ftestimonial-2.png&w=64&q=75"
+                                                    alt="">
+                                            </div>
+                                            <div>
+                                                <h3>Floyd Miles</h3>
+                                                <p>Bank of America</p>
+                                            </div>
+                                        </div>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="top">
+                                        <h4 class="title">Great Work</h4>
+                                        <span><i class="fa-solid fa-quote-left"></i></span>
+                                    </div>
+                                    <p class="desc">Amazing design, easy to customize and a design quality superlative
+                                        account on
+                                        its cloud platform for the optimized performance. And we didn’t on our
+                                        original designs.</p>
+                                    <div class="thumb">
+                                        <div class="profile">
+                                            <div class="image">
+                                                <img src="https://homez-appdir.vercel.app/_next/image?url=%2Fimages%2Ftestimonials%2Ftestimonial-2.png&w=64&q=75"
+                                                    alt="">
+                                            </div>
+                                            <div>
+                                                <h3>Floyd Miles</h3>
+                                                <p>Bank of America</p>
+                                            </div>
+                                        </div>
+                                        <div class="ratings">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -917,7 +1202,7 @@
         </footer>
     </main>
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
 </body>
 

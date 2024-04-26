@@ -1,5 +1,5 @@
 #city-list {
-    padding: 12rem 15rem;
+    @extend %sectionStyle;
 
     .container {
         .row-1 {
@@ -7,97 +7,104 @@
         }
 
         .row-2 {
-            .slider {
-                display: flex;
-                align-items: center;
 
-                .city {
-                    flex: 1;
+            .cityList {
+                border-radius: 12px;
+            }
+
+            .city {
+                flex: 1;
+                position: relative;
+                // width: 275px;
+                transition: all .3s ease-in-out;
+                border-radius: 6px;
+
+                &-image {
                     position: relative;
-                    // width: 275px;
+                    overflow: hidden;
+                    border-radius: 12px;
                     transition: all .3s ease-in-out;
-                    border-radius: 6px;
 
-                    &-image {
-                        position: relative;
-                        overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         border-radius: 12px;
                         transition: all .3s ease-in-out;
+                    }
+                }
 
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            transition: all .3s ease-in-out;
+                &-content {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    transition: all .3s ease-in-out;
+
+                    .top-area {
+                        position: absolute;
+                        padding-left: 3rem;
+                        top: 30px;
+                        color: $primary-color;
+
+                        h3 {
+                            font-weight: 600;
+                            margin-bottom: .5rem;
+                        }
+
+                        p {
+                            font-size: 1.4rem;
+                            font-weight: 400;
                         }
                     }
 
-                    &-content {
+                    .bottom-area {
                         position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
+                        left: 30px;
+                        bottom: 30px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transform: translateY(30px);
                         transition: all .3s ease-in-out;
 
-                        .top-area {
-                            position: absolute;
-                            padding-left: 3rem;
-                            top: 30px;
+                        a {
+                            font-size: 1.5rem;
                             color: $primary-color;
+                            font-weight: 400;
+                            cursor: pointer;
 
-                            h3 {
-                                font-weight: 600;
-                                margin-bottom: .5rem;
-                            }
-
-                            p {
-                                font-size: 1.4rem;
-                                font-weight: 400;
-                            }
-                        }
-
-                        .bottom-area {
-                            position: absolute;
-                            left: 30px;
-                            bottom: 30px;
-                            visibility: hidden;
-                            opacity: 0;
-                            transform: translateY(30px);
-                            transition: all .3s ease-in-out;
-
-                            a {
-                                font-size: 1.5rem;
-                                color: $primary-color;
-                                font-weight: 400;
-                                cursor: pointer;
-
-                                i {
-                                    transform: rotate(-45deg);
-                                    margin-left: 1.25rem;
-                                }
+                            i {
+                                transform: rotate(-45deg);
+                                margin-left: 1.25rem;
                             }
                         }
                     }
+                }
 
-                    &:hover {
-                        .city-image {
-                            img {
-                                filter: brightness(55%);
-                                transform: scale(1.1) rotate(-1deg);
-                            }
+                &:hover {
+                    .city-image {
+                        img {
+                            filter: brightness(55%);
+                            transform: scale(1.1) rotate(-1deg);
                         }
+                    }
 
-                        .city-content {
-                            .bottom-area {
-                                opacity: 1;
-                                visibility: visible;
-                                transform: translateY(0px);
-                            }
+                    .city-content {
+                        .bottom-area {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0px);
                         }
                     }
                 }
             }
         }
+    }
+}
+
+@media (max-width:992px) {
+    #city-list {
+        padding: 3rem 1rem;
     }
 }

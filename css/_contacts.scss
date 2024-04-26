@@ -1,13 +1,9 @@
 #contacts {
-    padding: 1rem;
     background-color: #F7F7F7;
     height: 300px;
     display: grid;
     place-items: center;
     margin-bottom: 10rem;
-
-    // display: flex;
-    // align-items: center;
 
     .container {
         width: 100%;
@@ -24,6 +20,17 @@
 
         &:hover {
             background-color: #ddd;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    #contacts {
+        margin-bottom: 0;
+
+        .container {
+            flex-direction: column;
+            gap: 2rem;
         }
     }
 }

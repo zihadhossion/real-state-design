@@ -1,11 +1,10 @@
 #help-category {
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 12rem 0;
+    @extend %sectionStyle;
     color: $second-color;
 
     .container {
         .row-1 {
+            text-align: center;
             margin-bottom: 5rem;
 
             .title {
@@ -27,6 +26,8 @@
             gap: 1rem;
 
             .icon-box {
+                text-align: center;
+
                 .card {
                     border-radius: 1rem;
                     padding: 6rem 3.5rem 2rem;
@@ -48,29 +49,6 @@
                         font-size: 1.4rem;
                         line-height: 1.7;
                         margin-bottom: 2.5rem;
-                    }
-
-                    .btn {
-                        font-size: 1.5rem;
-                        font-weight: 600;
-                        background: transparent;
-                        border: 1px solid $second-color;
-                        outline: none;
-                        border-radius: 1rem;
-                        padding: 1.6rem 3rem;
-                        transition: all .3s linear;
-                        cursor: pointer;
-
-                        &:hover {
-                            color: $primary-color;
-                            background: $second-color;
-                        }
-
-                        i {
-                            font-size: 1.5rem;
-                            margin-left: 1rem;
-                            transform: rotate(-45deg);
-                        }
                     }
 
                     &:hover {

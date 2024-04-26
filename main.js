@@ -49,20 +49,60 @@ for (const btn of btnActive) {
 
 //Initialize Swiper
 let swiper1 = new Swiper(".exploreProperty", {
-    slidesPerView: 6,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // visibilityFullFit: true,
+    autoResize: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     navigation: {
-        nextEl: ".next__active",
-        prevEl: ".prev__active",
+        nextEl: ".explore_next__active",
+        prevEl: ".explore_prev__active ",
     },
     pagination: {
         el: ".explore-pagination",
         clickable: true,
     },
+    breakpoints: {
+        // when window width is >= px;
+        992: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 6,
+            spaceBetween: 20,
+        },
+    }
 });
+let testimonial = new Swiper(".testimonial", {
+    // visibilityFullFit: true,
+    autoResize: true,
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
+    navigation: {
+        nextEl: ".next__active",
+        prevEl: ".prev__active",
+    },
+    pagination: {
+        el: ".testimonial-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        // when window width is >= px;
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+    }
+});
+
 let swiper2 = new Swiper(".featuredList", {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -94,10 +134,10 @@ let swiper2 = new Swiper(".featuredList", {
 let swiper3 = new Swiper(".cityList", {
     slidesPerView: 1,
     spaceBetween: 0,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -142,3 +182,4 @@ const exploreItem = document.querySelectorAll('#explore-property .in-out');
 
 // Loop over the elements and add each one to the observer
 exploreItem.forEach((element) => observer.observe(element));
+

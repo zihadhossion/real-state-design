@@ -208,6 +208,11 @@
             font-size: 1.5rem;
             gap: 2rem;
 
+            a {
+                color: $primary-color;
+
+            }
+
             .account {
                 font-weight: 600;
                 cursor: pointer;
@@ -258,6 +263,7 @@
         align-items: center;
         padding: 1rem 3rem;
         position: relative;
+        box-shadow: 0 1px 4px rgba(24, 26, 32, 0.07);
 
         .logo-box {
             cursor: pointer;
@@ -274,8 +280,10 @@
         top: 0;
         opacity: 0;
         visibility: hidden;
-        transition: all .25s ease-in-out;
+        transform: translateX(-100%);
         box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+        transition: all .25s ease-in-out;
+
 
         .side-header {
             background: $bg-light;
@@ -345,18 +353,8 @@
 
     .sideActive {
         opacity: 1;
-        animation: left-right .3s ease-in-out both;
         visibility: visible;
-    }
-
-    @keyframes left-right {
-        0% {
-            transform: translate3d(-100%, 0, 0);
-        }
-
-        100% {
-            transform: translateZ(0);
-        }
+        transform: none;
     }
 }
 
@@ -382,6 +380,12 @@
     }
 }
 
+@media (max-width:1200px) {
+    #header .desktop-bar .right .account span {
+        display: none;
+    }
+}
+
 @media (max-width:1100px) {
     #header {
         .desktop-bar {
@@ -399,12 +403,6 @@
                 gap: 1rem;
             }
         }
-    }
-}
-
-@media (max-width:1200px) {
-    #header .desktop-bar .right .account span {
-        display: none;
     }
 }
 

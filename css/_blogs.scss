@@ -1,6 +1,6 @@
 #blogs {
-    background-color: #fff;
-    padding: 12rem 0;
+    background-color: $primary-color;
+    @extend %sectionStyle;
 
     .row-1 {
         text-align: center;
@@ -85,85 +85,89 @@
 }
 
 @media (max-width:992px) {
-    // .row-1 {
-    //     text-align: center;
-    //     margin-top: 2rem;
-    //     margin-bottom: 6rem;
-    // }
+    #blogs {
+        padding: 0 1rem;
 
-    .row-2 {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
+        .row-1 {
+            text-align: left;
+            margin-top: 2rem;
+            margin-bottom: 6rem;
+        }
 
-        // .box {
-        //     .blog {
-        //         position: relative;
+        .row-2 {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
 
-        //         &-image {
-        //             border-radius: 12px;
-        //             overflow: hidden;
+            // .box {
+            //     .blog {
+            //         position: relative;
 
-        //             img {
-        //                 width: 100%;
-        //                 height: 100%;
-        //                 object-fit: cover;
-        //                 vertical-align: middle;
-        //                 transition: all .4s linear;
-        //             }
-        //         }
+            //         &-image {
+            //             border-radius: 12px;
+            //             overflow: hidden;
 
-        //         &-content {
-        //             position: relative;
-        //             padding: 1.75rem 2rem 0 0;
+            //             img {
+            //                 width: 100%;
+            //                 height: 100%;
+            //                 object-fit: cover;
+            //                 vertical-align: middle;
+            //                 transition: all .4s linear;
+            //             }
+            //         }
 
-        //             .date {
-        //                 width: 70px;
-        //                 height: 70px;
-        //                 font-size: 1.3rem;
-        //                 text-align: center;
-        //                 background-color: #fff;
-        //                 padding-top: 1rem;
-        //                 border-radius: 12px;
-        //                 text-align: center;
-        //                 position: absolute;
-        //                 top: -50px;
-        //                 right: 20px;
-        //                 box-shadow: 0 6px 15px #ddd;
+            //         &-content {
+            //             position: relative;
+            //             padding: 1.75rem 2rem 0 0;
 
-        //                 .day {
-        //                     font-size: 2rem;
-        //                     font-weight: 600;
-        //                 }
-        //             }
+            //             .date {
+            //                 width: 70px;
+            //                 height: 70px;
+            //                 font-size: 1.3rem;
+            //                 text-align: center;
+            //                 background-color: #fff;
+            //                 padding-top: 1rem;
+            //                 border-radius: 12px;
+            //                 text-align: center;
+            //                 position: absolute;
+            //                 top: -50px;
+            //                 right: 20px;
+            //                 box-shadow: 0 6px 15px #ddd;
 
-        //             .genre {
-        //                 font-size: 1.3rem;
-        //                 color: rgb(113, 113, 113);
-        //             }
+            //                 .day {
+            //                     font-size: 2rem;
+            //                     font-weight: 600;
+            //                 }
+            //             }
 
-        //             .desc {
-        //                 margin-top: 2rem;
-        //                 font-size: 1.5rem;
-        //                 font-weight: 600;
-        //                 color: #181a20;
-        //                 transition: all .25s linear;
-        //                 cursor: pointer;
+            //             .genre {
+            //                 font-size: 1.3rem;
+            //                 color: rgb(113, 113, 113);
+            //             }
 
-        //                 &:hover {
-        //                     color: rgb(233, 102, 83);
-        //                 }
-        //             }
-        //         }
+            //             .desc {
+            //                 margin-top: 2rem;
+            //                 font-size: 1.5rem;
+            //                 font-weight: 600;
+            //                 color: #181a20;
+            //                 transition: all .25s linear;
+            //                 cursor: pointer;
 
-        //         &:hover {
-        //             .blog-image {
-        //                 img {
-        //                     transform: scale(1.1) rotate(-1deg);
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+            //                 &:hover {
+            //                     color: rgb(233, 102, 83);
+            //                 }
+            //             }
+            //         }
+
+            //         &:hover {
+            //             .blog-image {
+            //                 img {
+            //                     transform: scale(1.1) rotate(-1deg);
+            //                 }
+            //             }
+            //         }
+            //     }
+            // }
+        }
     }
 }
