@@ -4,12 +4,13 @@
     font-size: 1.5rem;
 
     .container {
-        padding: 5rem 0;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
 
         .row-1 {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            align-items: center;
+            // align-items: center;
             column-gap: 7rem;
             margin-bottom: 5rem;
 
@@ -114,6 +115,7 @@
                 align-self: self-start;
 
                 .title {
+                    font-weight: 600;
                     margin-bottom: 3rem;
                 }
 
@@ -137,7 +139,7 @@
                         cursor: pointer;
                         position: absolute;
                         right: 25px;
-                        top: 25px;
+                        top: 22px;
                         background: transparent;
                         font-size: 1.5rem;
                         font-weight: 600;
@@ -187,7 +189,7 @@
             .right {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
+                gap: .5rem;
 
                 a {
                     color: #bebdbd;

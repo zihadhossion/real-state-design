@@ -7,15 +7,14 @@
         }
 
         .row-2 {
+            position: relative;
 
             .cityList {
                 border-radius: 12px;
             }
 
             .city {
-                flex: 1;
                 position: relative;
-                // width: 275px;
                 transition: all .3s ease-in-out;
                 border-radius: 6px;
 
@@ -99,12 +98,33 @@
                     }
                 }
             }
+
+            .swiperBtnList {
+                width: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: space-between;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 99999;
+
+                button {
+                    width: 50px;
+                    height: 50px;
+                    background-color: $primary-color;
+                    border-radius: 50%;
+                    box-shadow: 0 10px 35px rgba(5, 16, 54, .1);
+                    ;
+                    transition: $Transition;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }
 
 @media (max-width:992px) {
     #city-list {
-        padding: 3rem 1rem;
+        padding: 3rem 0rem;
     }
 }

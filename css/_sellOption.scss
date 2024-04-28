@@ -1,7 +1,9 @@
 #sell-option {
+    @extend %sectionStyle;
+
     .row {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
 
         .col-1 {
             margin-top: 10rem;
@@ -62,7 +64,7 @@
 
             .box {
                 display: inline-block;
-                max-width: 100%;
+                width: 100%;
 
                 img {
                     border-radius: 12px;
@@ -118,47 +120,6 @@
                 .btnBox {
                     display: inline-block;
                 }
-
-                // .title {
-                //     font-size: 3rem;
-                //     font-weight: 600;
-                //     margin-bottom: 3rem;
-                // }
-
-                // .desc {
-                //     margin-bottom: 2.5rem;
-                // }
-
-                // .specification {
-                //     margin-bottom: 5rem;
-
-                //     li {
-                //         display: flex;
-                //         gap: 1rem;
-
-                //         .checkIcon {
-                //             width: 25px;
-                //             height: 25px;
-                //             color: $primary-color;
-                //             background-color: $second-color;
-                //             border-radius: 50%;
-                //             text-align: center;
-
-                //             i {
-                //                 font-size: .75rem;
-                //                 vertical-align: middle;
-                //             }
-                //         }
-
-                //         &:not(:last-child) {
-                //             margin-bottom: 1rem;
-                //         }
-
-                //         span {
-                //             font-weight: 600;
-                //         }
-                //     }
-                // }
             }
 
             .col-2 {
@@ -176,22 +137,39 @@
             .col-2 {
                 text-align: left;
 
+                .img-box2 {
+                    img {
+                        width: 100%;
+                    }
+                }
+
                 .img-box3 {
-                    right: unset;
-                    left: 50%;
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    bottom: unset;
+                    top: 30%;
+                    bottom: auto;
                 }
             }
         }
     }
-
 }
 
-@media (max-width:500px) {
+@media (max-width:575px) {
     #sell-option {
         .row {
+            .col-1 {
+                .title {
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                .desc {
+                    margin-bottom: 2rem;
+                }
+
+                .specification {
+                    margin-bottom: 3rem;
+                }
+            }
+
             .col-2 {
                 .img-box2 {
                     margin-left: 0rem;
@@ -199,7 +177,6 @@
             }
         }
     }
-
 }
 
 @media (min-width:992px) {

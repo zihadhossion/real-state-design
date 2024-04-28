@@ -1,11 +1,13 @@
 //sticky bar for window scroll
 window.addEventListener("scroll", () => {
-    const stickyDesk = document.querySelector(".desktop-bar");
+    const stickyDesk = document.querySelector("#header");
     // const stickyMob = document.querySelector(".mobile-bar");
 
     if (window.scrollY > 0) {
         stickyDesk.classList.add("sticky");
+        // stickyDesk.classList.remove("container");
     } else {
+        // stickyDesk.classList.add("container");
         stickyDesk.classList.remove("sticky");
     }
 })
@@ -38,7 +40,9 @@ for (const ele of subMenu) {
     })
 }
 
-const btnActive = document.querySelectorAll("#home .nav-tabs button");
+//hero section btn active
+
+const btnActive = document.querySelectorAll("#hero .nav-tabs button");
 
 for (const btn of btnActive) {
     btn.addEventListener("click", () => {
@@ -77,6 +81,7 @@ let swiper1 = new Swiper(".exploreProperty", {
         },
     }
 });
+
 let testimonial = new Swiper(".testimonial", {
     // visibilityFullFit: true,
     autoResize: true,
@@ -131,22 +136,22 @@ let swiper2 = new Swiper(".featuredList", {
         }
     }
 });
-let swiper3 = new Swiper(".cityList", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+let cityList = new Swiper(".cityList", {
+    slidesPerView: 2,
+    spaceBetween: 10,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".cityList_next__active",
+        prevEl: ".cityList_prev__active ",
     },
     breakpoints: {
         // when window width is >= 768px
         768: {
             slidesPerView: 2,
             spaceBetween: 20
+        },
+        992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
         },
         // when window width is >= 1200px
         1200: {
@@ -165,7 +170,6 @@ var swiper = new Swiper(".mySwiper2", {
         clickable: true,
     },
 });
-
 
 // Create the observer like the examples above
 const observer = new IntersectionObserver(entries => {

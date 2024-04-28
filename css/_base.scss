@@ -36,6 +36,10 @@ button {
     outline: none;
 }
 
+.wrapper {
+    position: relative;
+}
+
 //global animation
 @keyframes fadeInUp {
     0% {
@@ -76,8 +80,8 @@ button {
 @media(min-width: 1200px) {
     .container {
         max-width: 1140px;
-        padding-left: 5rem;
-        padding-right: 5rem;
+        // padding-left: 5rem;
+        // padding-right: 5rem;
     }
 }
 
@@ -87,13 +91,22 @@ button {
     }
 }
 
-//regular button style
+.bg-black {
+    color: $primary-color;
+    background-color: #282A30 !important;
+}
 
+.bg-white {
+    color: $second-color;
+    background-color: $primary-color;
+}
+
+//regular button style
 .btn {
     display: inline-block;
     font-size: 1.5rem;
     font-weight: 600;
-    background: transparent;
+    background-color: transparent;
     border: 1px solid $second-color;
     border-radius: 1rem;
     padding: 1.6rem 3rem;
@@ -107,7 +120,7 @@ button {
 
     i {
         font-size: 1.5rem;
-        margin-left: 1rem;
+        margin-left: .75rem;
         transform: rotate(-45deg);
     }
 }
@@ -126,12 +139,13 @@ button {
     margin-bottom: 7rem;
     margin-top: 1rem;
 
-    .txt {
+    .col-1 {
         color: $second-color;
 
         .title {
             font-size: 3rem;
             font-weight: 600;
+            margin-bottom: 1rem;
         }
 
         .desc {
@@ -155,11 +169,65 @@ button {
             color: $color-1;
         }
     }
+
+    div:last-child {
+        align-self: flex-end;
+    }
 }
 
 @media (max-width:992px) {
+    %sectionStyle {
+        padding: 6rem 0;
+    }
+
     %containerTitleStyles {
+        div:last-child {
+            align-self: unset;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    %sectionStyle {
+        padding: 4rem 0;
+    }
+
+    %containerTitleStyles {
+        align-items: flex-start;
         flex-direction: column;
         gap: 2rem;
+    }
+}
+
+@media (max-width:575px) {
+    %sectionStyle {
+        padding: 3rem 0;
+    }
+
+    %containerTitleStyles {
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+
+        .col-1 {
+            .title {
+                font-size: 2rem;
+                margin-bottom: .5rem;
+            }
+
+            .desc {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.swiperBtn {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    button {
+        font-size: 1.5rem;
+        background-color: transparent;
     }
 }
