@@ -64,7 +64,7 @@
 
             .box {
                 display: inline-block;
-                width: 100%;
+                // width: 100%;
 
                 img {
                     border-radius: 12px;
@@ -179,7 +179,7 @@
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:993px) {
     #sell-option {
         .row {
             .col-1 {
@@ -191,20 +191,20 @@
             }
         }
     }
-
 }
 
 @media (min-width:1200px) {
     #sell-option {
         .row {
             .col-1 {
+                flex: 0 0 auto;
                 width: 33.333333%;
             }
 
             .col-2 {
+                flex: 0 0 auto;
                 width: 66.6666667%;
             }
         }
     }
-
 }

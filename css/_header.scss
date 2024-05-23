@@ -4,7 +4,7 @@
     border-bottom: 1px solid hsla(0, 0%, 100%, .07);
     background-color: transparent;
     position: fixed;
-    z-index: 9;
+    z-index: 999;
     padding: 2rem 0;
 
     .desktop-bar {
@@ -249,12 +249,12 @@
     }
 }
 
-.mobile-bar {
+#mobile-bar {
     display: none;
     width: 100%;
     font-size: 2rem;
     color: $second-color;
-    background: $primary-color;
+    background-color: $primary-color;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 3rem;
@@ -265,93 +265,124 @@
     .logo-box {
         cursor: pointer;
     }
-}
 
-.sidebar {
-    width: 280px;
-    height: 100%;
-    background: $primary-color;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: fixed;
-    top: 0;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateX(-100%);
-    box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
-    transition: all .25s ease-in-out;
+    #sidebar {
+        width: 320px;
+        height: 100%;
+        background: $primary-color;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+        box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
+        transition: all .25s ease-in-out;
+        z-index: 99;
 
+        .side-header {
+            background-color: $bg-light;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
 
-    .side-header {
-        background: $bg-light;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 2rem 1.25rem;
-
-        h4 {
-            font-size: 2rem;
-            font-weight: 600;
-            color: $second-color;
-        }
-
-        #closeMenu {
-            color: $primary-color;
-            background: $color-2;
-            border-radius: 50%;
-            padding: .8rem 1.5rem;
-        }
-    }
-
-    .side-content {
-        #nav-links {
-            .drop-item {
-                width: 100%;
+            h4 {
+                font-size: 2rem;
                 font-weight: 600;
-                border-radius: 6rem;
+                color: $second-color;
+            }
+
+            #closeMenu {
+                color: $primary-color;
+                background: $color-2;
+                border-radius: 50%;
                 padding: .8rem 1.5rem;
-                transition: all .25s linear;
-                position: relative;
-                cursor: pointer;
+            }
+        }
 
-                .list-item {
-                    color: $second-color;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
+        .side-content {
+            padding: 0 2rem;
 
-                .sub-menu {
-                    display: none;
-                    height: 0px;
-                    color: $second-color;
-                    background: $primary-color;
-                    border-radius: .6rem;
-                    box-shadow: 0 10px 40px rgba(24, 26, 32, .05);
-                    transition: height 500ms !important;
-                }
+            #nav-links {
+                .drop-item {
+                    width: 100%;
+                    font-weight: 500;
+                    border-radius: 6rem;
+                    padding: 0rem 1.5rem;
+                    margin-top: 3rem;
+                    transition: all .25s linear;
+                    position: relative;
+                    cursor: pointer;
 
-                .ss-menu {
-                    display: block;
-                    overflow: auto;
-                    height: auto;
-                    position: static;
-                    transform: none;
-                }
+                    .list-item {
+                        color: $second-color;
+                        font-size: 1.6rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
 
-                .aeroActive {
-                    transform: rotate(90deg);
-                    transition: all .1s ease-in-out;
+                    .sub-menu {
+                        visibility: hidden;
+                        opacity: 0;
+                        height: 0px;
+                        color: $second-color;
+                        font-size: 1.6rem;
+                        margin: 1rem 0;
+                        margin-left: 1.5rem;
+                        border-radius: .6rem;
+                        transition: height 1s linear;
+
+                        li {
+                            margin-top: 1.5rem;
+                        }
+
+                        .child-menu {
+                            .child-item {
+                                color: $second-color;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                            }
+
+                            .child-list {
+                                visibility: hidden;
+                                opacity: 0;
+                                height: 0px;
+                                color: $second-color;
+                                border-radius: .6rem;
+                                margin-left: 1.5rem;
+                                transition: height 1s linear;
+                            }
+                        }
+                    }
                 }
             }
+        }
+
+        .ss-menu {
+            height: auto !important;
+            position: static;
+            transform: none;
+            visibility: visible !important;
+            opacity: 1 !important;
+            transition: all 250ms linear;
+        }
+
+        .aeroActive {
+            transform: rotate(90deg);
+            transition: all 50ms ease-in-out;
         }
     }
 }
 
 .sideActive {
-    opacity: 1;
-    visibility: visible;
-    transform: none;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
 }
 
 @media (max-width:1200px) {
@@ -376,14 +407,12 @@
     }
 }
 
-
 @media (max-width:992px) {
     #header {
         display: none;
-
     }
 
-    .mobile-bar {
+    #mobile-bar {
         display: flex;
     }
 }

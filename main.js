@@ -14,8 +14,8 @@ window.addEventListener("scroll", () => {
 
 
 //sidebar show/hide
-const sideBar = document.querySelector(".sidebar");
-const menuBar = document.querySelector(".mobile-bar .menu-bar");
+const sideBar = document.querySelector("#sidebar");
+const menuBar = document.querySelector("#mobile-bar .menu-bar");
 const closeBar = document.querySelector("#closeMenu");
 
 menuBar.addEventListener("click", () => {
@@ -25,23 +25,43 @@ closeBar.addEventListener("click", () => {
     sideBar.classList.remove("sideActive");
 })
 
+
 //sub menu show/hide 
-const subMenu = document.querySelectorAll(".side-content .list-item");
-const rightAeros = document.querySelectorAll(".sidebar .fa-chevron-right");
+const subMenus = document.querySelectorAll("#sidebar .list-item");
+for (const subMenu of subMenus) {
+    subMenu.addEventListener("click", () => {
+        const ssMenu = subMenu.parentElement.querySelector(".sub-menu");
+        const aeroIcon = subMenu.querySelector(".fa-chevron-right");
 
-for (const ele of subMenu) {
-    ele.addEventListener("click", () => {
-        const ssMenu = ele.nextElementSibling;
-        ssMenu.classList.toggle("ss-menu");
-
-        for (const aero of rightAeros) {
-            aero.classList.toggle("aeroActive");
+        if (ssMenu) {
+            ssMenu.classList.toggle("ss-menu");
+        }
+        if (aeroIcon) {
+            aeroIcon.classList.toggle("aeroActive");
         }
     })
 }
 
-//hero section btn active
 
+//submenus child menu show/hide 
+const childMenus = document.querySelectorAll("#sidebar .child-item");
+
+for (const childMenu of childMenus) {
+    childMenu.addEventListener("click", () => {
+        const ssMenu = childMenu.parentElement.querySelector(".child-list");
+        const aeroIcon = childMenu.querySelector(".fa-chevron-right");
+
+        if (ssMenu) {
+            ssMenu.classList.toggle("ss-menu");
+        }
+        if (aeroIcon) {
+            aeroIcon.classList.toggle("aeroActive");
+        }
+    })
+}
+
+
+//hero section btn active
 const btnActive = document.querySelectorAll("#hero .nav-tabs button");
 
 for (const btn of btnActive) {
