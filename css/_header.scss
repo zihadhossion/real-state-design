@@ -313,9 +313,8 @@
                     border-radius: 6rem;
                     padding: 0rem 1.5rem;
                     margin-top: 3rem;
-                    transition: all .25s linear;
+                    transition: all 250ms linear;
                     position: relative;
-                    cursor: pointer;
 
                     .list-item {
                         color: $second-color;
@@ -327,17 +326,23 @@
 
                     .sub-menu {
                         visibility: hidden;
-                        opacity: 0;
                         height: 0px;
                         color: $second-color;
                         font-size: 1.6rem;
                         margin: 1rem 0;
                         margin-left: 1.5rem;
                         border-radius: .6rem;
-                        transition: height 1s linear;
+                        position: static;
+                        transform: scaleY(0);
+                        transform-origin: 0 0;
+                        transition: transform 200ms;
 
                         li {
                             margin-top: 1.5rem;
+
+                            a {
+                                color: $second-color;
+                            }
                         }
 
                         .child-menu {
@@ -350,12 +355,13 @@
 
                             .child-list {
                                 visibility: hidden;
-                                opacity: 0;
                                 height: 0px;
                                 color: $second-color;
                                 border-radius: .6rem;
                                 margin-left: 1.5rem;
-                                transition: height 1s linear;
+                                transform: scaleY(0);
+                                transform-origin: 0 0;
+                                transition: transform 200ms;
                             }
                         }
                     }
@@ -365,11 +371,8 @@
 
         .ss-menu {
             height: auto !important;
-            position: static;
-            transform: none;
             visibility: visible !important;
-            opacity: 1 !important;
-            transition: all 250ms linear;
+            transform: scaleY(1) !important;
         }
 
         .aeroActive {

@@ -35,6 +35,9 @@ for (const subMenu of subMenus) {
 
         if (ssMenu) {
             ssMenu.classList.toggle("ss-menu");
+            // ssMenu.style.visibility = "visible";
+            // ssMenu.style.height = "auto";
+
         }
         if (aeroIcon) {
             aeroIcon.classList.toggle("aeroActive");
