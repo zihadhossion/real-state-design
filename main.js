@@ -5,9 +5,7 @@ window.addEventListener("scroll", () => {
 
     if (window.scrollY > 0) {
         stickyDesk.classList.add("sticky");
-        // stickyDesk.classList.remove("container");
     } else {
-        // stickyDesk.classList.add("container");
         stickyDesk.classList.remove("sticky");
     }
 })
@@ -76,9 +74,8 @@ for (const btn of btnActive) {
 
 //Initialize Swiper
 let swiper1 = new Swiper(".exploreProperty", {
-    // visibilityFullFit: true,
     autoResize: true,
-    slidesPerView: "auto",
+    slidesPerView: 2,
     spaceBetween: 20,
     // autoplay: {
     //     delay: 2500,
@@ -94,8 +91,12 @@ let swiper1 = new Swiper(".exploreProperty", {
     },
     breakpoints: {
         // when window width is >= px;
+        575: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
         992: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 20,
         },
         1200: {

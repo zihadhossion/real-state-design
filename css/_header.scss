@@ -198,8 +198,7 @@
     background-color: #fff !important;
     padding: 1.5rem 0rem !important;
     box-shadow: 0 1px 4px rgba(24, 26, 32, .07);
-    animation: slideDown .75s both;
-    // z-index: 99;
+    animation: slideDown 500ms both;
 
     .desktop-bar {
         .left {
@@ -257,9 +256,9 @@
     background-color: $primary-color;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 3rem;
+    padding: 1.5rem 5rem;
     position: fixed;
-    z-index: 9;
+    z-index: 999;
     box-shadow: 0 1px 4px rgba(24, 26, 32, 0.07);
 
     .logo-box {
@@ -304,24 +303,32 @@
         }
 
         .side-content {
-            padding: 0 2rem;
+            // padding: 0 2rem;
 
             #nav-links {
                 .drop-item {
                     width: 100%;
                     font-weight: 500;
-                    border-radius: 6rem;
-                    padding: 0rem 1.5rem;
-                    margin-top: 3rem;
                     transition: all 250ms linear;
                     position: relative;
 
+                    &:first-child {
+                        margin-top: 3rem;
+                    }
+
                     .list-item {
+                        width: 100%;
                         color: $second-color;
                         font-size: 1.6rem;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        padding: 1.5rem 3rem;
+                        transition: all 250ms linear;
+
+                        &:hover {
+                            background-color: $color-4;
+                        }
                     }
 
                     .sub-menu {
@@ -329,16 +336,23 @@
                         height: 0px;
                         color: $second-color;
                         font-size: 1.6rem;
-                        margin: 1rem 0;
-                        margin-left: 1.5rem;
                         border-radius: .6rem;
                         position: static;
                         transform: scaleY(0);
                         transform-origin: 0 0;
                         transition: transform 200ms;
 
+                        .link-item {
+                            padding: 1rem 0 1rem 5rem;
+                            transition: all 250ms linear;
+
+                            &:hover {
+                                background-color: $color-4;
+                            }
+                        }
+
                         li {
-                            margin-top: 1.5rem;
+                            font-size: 1.4rem;
 
                             a {
                                 color: $second-color;
@@ -348,9 +362,17 @@
                         .child-menu {
                             .child-item {
                                 color: $second-color;
+                                font-size: 1.5rem;
                                 display: flex;
                                 justify-content: space-between;
                                 align-items: center;
+                                padding: 1rem 3rem 1rem 5rem;
+                                transition: all 250ms linear;
+
+
+                                &:hover {
+                                    background-color: $color-4;
+                                }
                             }
 
                             .child-list {
@@ -358,10 +380,18 @@
                                 height: 0px;
                                 color: $second-color;
                                 border-radius: .6rem;
-                                margin-left: 1.5rem;
                                 transform: scaleY(0);
                                 transform-origin: 0 0;
                                 transition: transform 200ms;
+
+                                .chLink {
+                                    padding: 1rem 0 1rem 7rem;
+                                    transition: all 250ms linear;
+
+                                    &:hover {
+                                        background-color: $color-4;
+                                    }
+                                }
                             }
                         }
                     }
@@ -417,5 +447,11 @@
 
     #mobile-bar {
         display: flex;
+    }
+}
+
+@media (max-width:768px) {
+    #mobile-bar {
+        padding: 1.25rem 3rem;
     }
 }

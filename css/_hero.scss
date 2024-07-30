@@ -1,3 +1,15 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 #hero {
     color: $primary-color;
     text-align: center;
@@ -19,7 +31,6 @@
             text-align: center;
             display: grid;
             place-items: center;
-            // padding: 0 2rem;
 
             .sub-title {
                 font-weight: 400;
@@ -150,18 +161,6 @@
             }
         }
     }
-
-    @keyframes fadeInUp {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
 }
 
 @media (max-width:992px) {
@@ -186,11 +185,7 @@
             padding-bottom: 3rem;
 
             .content {
-                // padding: 0 1rem;
-
                 .search-content {
-                    // max-width: 500px;
-
                     .tab-content .row {
 
                         .col-1,

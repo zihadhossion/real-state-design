@@ -28,7 +28,6 @@
             .listContainer {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                // grid-template-columns: repeat(1, 1fr);
                 align-items: center;
                 gap: 2rem;
                 margin-bottom: 3rem;
@@ -44,9 +43,8 @@
                         overflow: hidden;
 
                         .image {
-                            // position: relative;
                             width: 100%;
-                            transition: all .25s linear;
+                            transition: $Transition;
                         }
 
                         .sticker {
@@ -96,7 +94,7 @@
 
                             li {
                                 font-size: 1.3rem;
-                                transition: all .2s linear;
+                                transition: $Transition;
 
                                 span {
                                     margin-left: 1rem;

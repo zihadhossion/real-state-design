@@ -3,9 +3,10 @@ $second-color: #181a20;
 $color-1: #eb6753;
 $color-2: #ee4c34;
 $color-3: #bebdbd;
+$color-4: #f3f3f3;
 $bg-light: #fef4f3;
 $bg-white: #f7f7f7;
-$Transition: all .25s linear;
+$Transition: all 250ms linear;
 
 * {
     margin: 0;
@@ -24,6 +25,8 @@ body {
 
 a {
     text-decoration: none;
+    // outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 ul,
@@ -81,8 +84,6 @@ button {
 @media(min-width: 1200px) {
     .container {
         max-width: 1140px;
-        // padding-left: 5rem;
-        // padding-right: 5rem;
     }
 }
 
@@ -128,8 +129,22 @@ button {
 
 //section common style
 %sectionStyle {
-    padding: 12rem 0;
+    padding: 10rem 0;
     position: relative;
+}
+
+//container mainTextBar style
+%mainTextBar {
+    .title {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .desc {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
 }
 
 //common style for container 
@@ -180,23 +195,11 @@ button {
     %sectionStyle {
         padding: 6rem 0;
     }
-
-    %containerTitleStyles {
-        div:last-child {
-            align-self: unset;
-        }
-    }
 }
 
 @media (max-width:768px) {
     %sectionStyle {
         padding: 4rem 0;
-    }
-
-    %containerTitleStyles {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 2rem;
     }
 }
 
@@ -206,7 +209,9 @@ button {
     }
 
     %containerTitleStyles {
-        gap: 2.5rem;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2rem;
         margin-bottom: 5rem;
 
         .col-1 {
@@ -214,10 +219,17 @@ button {
                 font-size: 2rem;
                 margin-bottom: .5rem;
             }
+        }
 
-            .desc {
-                font-size: 1.4rem;
-            }
+        div:last-child {
+            align-self: center;
+        }
+    }
+
+    %mainTextBar {
+        .title {
+            font-size: 2rem;
+            margin-bottom: .5rem;
         }
     }
 }
@@ -230,5 +242,6 @@ button {
     button {
         font-size: 1.5rem;
         background-color: transparent;
+        cursor: pointer;
     }
 }

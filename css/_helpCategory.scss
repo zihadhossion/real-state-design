@@ -1,6 +1,7 @@
 #help-category {
     @extend %sectionStyle;
     color: $second-color;
+    padding-top: 0;
 
     .container {
         .row-1 {
@@ -10,6 +11,7 @@
             .title {
                 font-size: 3rem;
                 font-weight: 600;
+                margin-bottom: 1rem;
             }
 
             .desc {

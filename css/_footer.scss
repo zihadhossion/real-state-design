@@ -1,7 +1,6 @@
 #footer {
     color: $primary-color;
     background: $second-color;
-    font-size: 1.5rem;
 
     .container {
         padding-top: 5rem;
@@ -10,7 +9,6 @@
         .row-1 {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            // align-items: center;
             column-gap: 7rem;
             margin-bottom: 5rem;
 
@@ -35,12 +33,12 @@
 
                     .contact {
                         font-weight: 600;
-                        transition: all .2s linear;
-                    }
+                        transition: $Transition;
 
-                    .contact:hover {
-                        cursor: pointer;
-                        color: $color-1;
+                        &:hover {
+                            color: $color-1;
+                            cursor: pointer;
+                        }
                     }
                 }
 
@@ -60,14 +58,14 @@
 
                         .col {
                             width: 200px;
+                            color: $primary-color;
+                            background-color: hsla(0, 0%, 100%, .04);
                             display: flex;
                             align-items: center;
                             gap: 2rem;
-                            color: $primary-color;
-                            background: hsla(0, 0%, 100%, .04);
                             border-radius: 1rem;
                             padding: .75rem 1.5rem;
-                            transition: all .25s linear;
+                            transition: $Transition;
 
                             .icon {
                                 font-size: 3rem;
@@ -77,10 +75,10 @@
                                 font-size: 1.3rem;
                                 color: $color-3;
                             }
-                        }
 
-                        .col:hover {
-                            background: $color-2;
+                            &:hover {
+                                background-color: $color-2;
+                            }
                         }
                     }
                 }
@@ -97,14 +95,14 @@
                         .social-link {
                             background: transparent;
                             border-radius: 50%;
-                            padding: .7rem 1.3rem;
-                            transition: all .2s linear;
                             position: relative;
-                        }
-
-                        .social-link:hover {
+                            padding: .7rem 1.3rem;
+                            transition: $Transition;
                             cursor: pointer;
-                            background: hsla(0, 0%, 100%, .05);
+
+                            &:hover {
+                                background-color: hsla(0, 0%, 100%, .05);
+                            }
                         }
                     }
                 }
@@ -136,19 +134,18 @@
 
                     button {
                         color: $primary-color;
-                        cursor: pointer;
+                        background: transparent;
                         position: absolute;
                         right: 25px;
                         top: 22px;
-                        background: transparent;
                         font-size: 1.5rem;
                         font-weight: 600;
+                        cursor: pointer;
                     }
                 }
 
                 .footer-list {
                     display: flex;
-                    align-items: flex-start;
                     justify-content: space-between;
 
                     .col-link {
@@ -161,8 +158,8 @@
                             li {
                                 color: #bebdbd;
                                 font-size: 1.4rem;
-                                cursor: pointer;
                                 transition: $Transition;
+                                cursor: pointer;
 
                                 &:not(&:last-child) {
                                     margin-bottom: 2rem;
@@ -300,9 +297,9 @@
             .row-1 {
                 .col-2 {
                     .footer-list {
-                        text-align: center;
                         align-items: inherit;
                         flex-direction: column;
+                        justify-content: center;
 
                         .col-link {
                             margin-bottom: 2rem;

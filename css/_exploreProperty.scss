@@ -25,7 +25,8 @@
                     background: $bg-white;
                     border-radius: 1rem;
                     padding: 3rem;
-                    transition: all .3s linear;
+                    transition: all 300ms linear;
+                    cursor: pointer;
 
                     .exIcon {
                         font-size: 3rem;
@@ -79,8 +80,6 @@
     }
 
     .inOut-ani {
-        animation: fadeInUp .25s linear .2s both;
+        animation: fadeInUp 250ms linear .2s both;
     }
 }
-
-// @media (max-width:992px) {}

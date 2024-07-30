@@ -10,12 +10,11 @@
         .row-2 {
             .item {
                 width: 100%;
-                // max-width: 300px;
                 color: $second-color;
                 background: $primary-color;
                 border-radius: 1rem;
                 padding: 3rem;
-                transition: all .3s linear;
+                transition: $Transition;
 
                 .top {
                     display: flex;
@@ -69,7 +68,6 @@
         .container {
             .row-2 {
                 .item {
-
                     .thumb {
                         flex-direction: column;
                         gap: 2rem;
