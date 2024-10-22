@@ -64,12 +64,14 @@
                             margin-top: 1rem;
 
                             h4 {
+                                font-size: 15px;
                                 padding: 1rem 3rem;
                             }
 
                             li {
+                                font-size: 13px;
                                 width: 200px;
-                                margin-bottom: .7rem;
+                                margin-bottom: .5rem;
                                 padding: 1rem 3rem;
                                 transition: all .25s linear;
 
@@ -105,8 +107,9 @@
                         width: 240px;
 
                         li {
+                            font-size: 13px;
                             width: 240px;
-                            margin-bottom: .75rem;
+                            margin-bottom: .5rem;
                             padding: 1rem 3rem;
                             transition: all .25s linear;
                             position: relative;
